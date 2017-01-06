@@ -6,6 +6,8 @@
 
 Minimal, responsible Jekyll theme for hackers.
 
+![whiteglass theme](screenshot.png)
+
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
