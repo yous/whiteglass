@@ -1,0 +1,26 @@
+language: ruby
+sudo: false
+cache: bundler
+rvm:
+  - 2.3.3
+env:
+  global:
+    secure: oGRNXaRgbtYOpdera/TeIvWo/NNuaWNJZ3M/L2yN+HmwwyfODCzfEI45G8mxvQ2oTsDwYomOZ3j9oDQgqsibA7BdwmkGEHHcT3ukCIoBOq8HhHjqkxZ3oAAyg+55WDgBp4moQFMWPDuljAG1OXtuHR5Ox/z8/jAVwEah087lkwTrak6veHcpTuhIoR2PZNREVNyrw5Y0YajjH0pKlUKVSzMAbpQdc3mYnHdu67nAw59cztqXtTUPKHL7SeFpIFzqB1aWs59Tzb/oz8djg607P8JmXZNckP7XuQqfpjolqR/ISg03TdDog9vlcb4DG7Cv87kXXLYGK8XNKWpTov9JOMr6pOmfPefb/nUrFcZBInMAcZFAfM+E3OPEmgTyfKAWT3IrWmTkmEJpUK83KY5r4HotxufLNc5WblJfhrL6bQyM6Tl5PcM7yrFMujsX+h7xET9eBqiuwkZaDNetGFMquAWnsYnXqLg7mhdcgNInTHhb9Tkgvi9q/t2Nug+TFFLqYT4GdI6ISdglKlM1vmgZQJjcOhk7Emi5lLCYMR06U8x0LpEd4qsfAdZMyJavg1pB8h2aEcuYuy6yL1ekbkiD/mBk0/3oSAF3PgngdiTabQ8RJ5KSPoKR3kDYrv1ig9GWlDC+VAUDSiffsXA6JwgpVIngDOTusTHqc4LHb+p1Evs=
+before_install:
+  - gem update --system
+  - gem update --remote bundler
+before_script:
+  - git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
+  - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
+script:
+  - git clone -b gh-pages --depth 1 --quiet https://${TOKEN}@github.com/yous/whiteglass.git _site
+  - rm -r _site/*
+  - bundle exec jekyll build
+after_success:
+  - cd _site
+  - git add -A
+  - git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
+  - git push https://${TOKEN}@github.com/yous/whiteglass.git gh-pages --quiet
+branches:
+  only:
+    - master
