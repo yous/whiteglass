@@ -1,6 +1,7 @@
 # whiteglass
 
 [![Build Status](https://travis-ci.org/yous/whiteglass.svg?branch=master)](https://travis-ci.org/yous/whiteglass)
+[![Dependency Status](https://gemnasium.com/badges/github.com/yous/whiteglass.svg)](https://gemnasium.com/github.com/yous/whiteglass)
 
 Minimal, responsible Jekyll theme for hackers.
 
