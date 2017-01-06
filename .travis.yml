@@ -14,7 +14,7 @@ before_script:
   - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
 script:
   - git clone -b gh-pages --depth 1 --quiet https://${TOKEN}@github.com/yous/whiteglass.git _site
-  - rm -r _site/*
+  - rm -rf _site/*
   - bundle exec jekyll build
 after_success:
   - cd _site
