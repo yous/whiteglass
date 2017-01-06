@@ -1,5 +1,7 @@
 # whiteglass
 
+[![Build Status](https://travis-ci.org/yous/whiteglass.svg?branch=master)](https://travis-ci.org/yous/whiteglass)
+
 Minimal, responsible Jekyll theme for hackers.
 
 ## Installation
