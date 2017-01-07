@@ -41,10 +41,21 @@ gem install jekyll-whiteglass
 To override the default structure and style of whiteglass, simply create the
 concerned directory at the root of your site, copy the file you wish to
 customize to that directory, and then edit the file. e.g., to override the
-[`_includes/head_custom.html`](_includes/head_custom.html) file to specify a
-custom style path, create an `_includes` directory, copy
-`_includes/head_custom.html` from jekyll-whiteglass gem folder to
+[`_includes/footer_content.html`](_includes/footer_content.html) file to add
+contents to footer, create an `_includes` directory, copy
+`_includes/footer_content.html` from jekyll-whiteglass gem folder to
 `<your-site>/_includes` and start editing that file.
+
+For example, you can add favicons to `_includes/head_custom.html`:
+
+``` html
+<link href="{{ "/favicon.png" | relative_url }}" rel="icon">
+<link href="{{ "/apple-touch-icon.png" | relative_url }}" rel="apple-touch-icon">
+<link href="{{ "/apple-touch-icon-76x76.png" | relative_url }}" rel="apple-touch-icon" sizes="76x76">
+<link href="{{ "/apple-touch-icon-120x120.png" | relative_url }}" rel="apple-touch-icon" sizes="120x120">
+<link href="{{ "/apple-touch-icon-152x152.png" | relative_url }}" rel="apple-touch-icon" sizes="152x152">
+<link href="{{ "/apple-touch-icon-180x180.png" | relative_url }}" rel="apple-touch-icon" sizes="180x180">
+```
 
 The site's default CSS is in the gem itself,
 [`assets/main.scss`](assets/main.scss). To override the default CSS, the file
