@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.1.0 (2017-01-07)
+
+- Make feed path configurable
+- Empty `head_custom.html` to prevent adding comments
+
 ## 1.0.1 (2017-01-07)
 
 - Fix RSS feed URL
