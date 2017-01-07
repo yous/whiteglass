@@ -1,1 +1,5 @@
-&copy; {{ site.author }} - Subscribe via <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+{% assign feed_path = "/feed.xml" %}
+{% if site.feed and site.feed.path %}
+  {% assign feed_path = site.feed.path %}
+{% endif %}
+&copy; {{ site.author }} - Subscribe via <a href="{{ feed_path | absolute_url }}">RSS</a>

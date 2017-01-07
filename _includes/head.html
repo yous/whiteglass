@@ -12,7 +12,11 @@
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ canonical }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  {% assign feed_path = "/feed.xml" %}
+  {% if site.feed and site.feed.path %}
+    {% assign feed_path = site.feed.path %}
+  {% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ feed_path | absolute_url }}">
 
   {% include head_custom.html %}
 

@@ -111,6 +111,26 @@ categories:
   - Idea
 ```
 
+### Feed
+
+Create `<your-site>/feed.xml` with:
+
+``` yaml
+---
+layout: feed
+---
+```
+
+If you want to use another path for feed, you can specify a non-default path via
+your site's config.
+
+``` yaml
+feed:
+  path: atom.xml
+```
+
+Then create `<your-site>/atom.xml` with the same content of `feed.xml` above.
+
 ### Metadata for SEO
 
 #### Keywords
