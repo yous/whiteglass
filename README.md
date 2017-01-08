@@ -49,12 +49,12 @@ contents to footer, create an `_includes` directory, copy
 For example, you can add favicons to `_includes/head_custom.html`:
 
 ``` html
-<link href="{{ "/favicon.png" | relative_url }}" rel="icon">
-<link href="{{ "/apple-touch-icon.png" | relative_url }}" rel="apple-touch-icon">
-<link href="{{ "/apple-touch-icon-76x76.png" | relative_url }}" rel="apple-touch-icon" sizes="76x76">
-<link href="{{ "/apple-touch-icon-120x120.png" | relative_url }}" rel="apple-touch-icon" sizes="120x120">
-<link href="{{ "/apple-touch-icon-152x152.png" | relative_url }}" rel="apple-touch-icon" sizes="152x152">
-<link href="{{ "/apple-touch-icon-180x180.png" | relative_url }}" rel="apple-touch-icon" sizes="180x180">
+<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png" | relative_url }}">
 ```
 
 The site's default CSS is in the gem itself,
