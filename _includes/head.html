@@ -5,7 +5,7 @@
 
   {% assign title = page.title | default: site.title | escape %}
   {% assign canonical = page.url | replace:'index.html','' | absolute_url %}
-  {% assign description = page.description | default: site.description | normalize_whitespace | escape %}
+  {% assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
