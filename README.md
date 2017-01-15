@@ -102,6 +102,23 @@ title: Awesome Post
 description: This is an awesome post.
 ```
 
+If you don't specify `post.description`, then `post.excerpt` will be used if it
+exist.
+
+### External URL
+
+`external-url` turns the title of your post to a link. Specify a URL which you
+want to link to.
+
+``` yaml
+layout: post
+title: Jekyll whiteglass theme
+external-url: https://github.com/yous/whiteglass
+```
+
+Then the title of your post would look like a link with text
+`Jekyll whiteglass theme →`. This also applies to your blog feed.
+
 ### Category
 
 Each post can have `categories` attribute. It can be a string or an array. This
