@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.2.0 (2017-01-16)
+
+- Use excerpt for meta tags (#1)
+
 ## 1.1.0 (2017-01-07)
 
 - Make feed path configurable
