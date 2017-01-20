@@ -1,26 +1,26 @@
 // Define defaults for each variable.
-$base-font-family: Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic, "Malgun Gothic", Dotum, sans-serif;
-$monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family: Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic, "Malgun Gothic", Dotum, sans-serif !default;
+$monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
 
-$spacing-unit:     30px;
+$spacing-unit:     30px !default;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2568ba;
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2568ba !default;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    800px !default;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
 
 
 
