@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Make theme can be overridden (#2)
+
 ## 1.2.0 (2017-01-16)
 
 - Use excerpt for meta tags (#1)
