@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.2.1 (2017-01-23)
 
 - Make theme can be overridden (#2)
 
