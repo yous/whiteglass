@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: whiteglass theme
 author: Yous
-description: Minimal, responsible Jekyll theme for hackers.
+description: Minimal, responsive Jekyll theme for hackers.
 baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
 url: "https://yous.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en

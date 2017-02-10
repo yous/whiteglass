@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 ---
 
-whiteglass is a minimal, responsible Jekyll theme for hackers.
+whiteglass is a minimal, responsive Jekyll theme for hackers.
 
 ## Installation
 

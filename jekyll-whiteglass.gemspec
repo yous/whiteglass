@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Chayoung You"]
   spec.email         = ["yousbe@gmail.com"]
 
-  spec.summary       = %q{Minimal, responsible Jekyll theme for hackers.}
+  spec.summary       = %q{Minimal, responsive Jekyll theme for hackers.}
   spec.homepage      = "https://github.com/yous/whiteglass"
   spec.license       = "MIT"
 
