@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.3.0 (2017-02-20)
+
+- Fix typos of the theme description
+- Add powered-by links to the footer
+
 ## 1.2.1 (2017-01-23)
 
 - Make theme can be overridden (#2)
