@@ -34,6 +34,64 @@ Or install it yourself as:
 gem install jekyll-whiteglass
 ```
 
+## Quick Start
+
+1. Generate a new Jekyll blog:
+
+   ``` sh
+   jekyll new blog --skip-bundle
+   cd blog
+   ```
+
+2. Edit `Gemfile` to use whiteglass theme:
+
+   ``` ruby
+   gem "jekyll-whiteglass"
+   ```
+
+3. Edit `_config.yml` to use whiteglass theme and its plugins:
+
+   ``` yaml
+   theme: jekyll-whiteglass
+   gems:
+     - jekyll-archives
+     - jekyll-paginate
+     - jekyll-sitemap
+
+   permalink: /:year/:month/:day/:title/
+   paginate_path: /posts/:num/
+   paginate: 5
+
+   jekyll-archives:
+     enabled:
+       - categories
+     layout: category_archives
+     permalinks:
+       category: /categories/:name/
+   ```
+
+4. Copy
+   [`index.html`](https://github.com/yous/whiteglass/blob/master/index.html),
+   [`about.md`](https://github.com/yous/whiteglass/blob/master/about.md),
+   [`archives.md`](https://github.com/yous/whiteglass/blob/master/archives.md),
+   [`feed.xml`](https://github.com/yous/whiteglass/blob/master/feed.xml), and
+   [`_data/navigation.yml`](https://github.com/yous/whiteglass/blob/master/_data/navigation.yml)
+   from the theme:
+
+   ``` sh
+   rm index.md
+   curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"
+   curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
+   ```
+
+5. Install gems and you're good to go! The blog will be available on
+   `http://127.0.0.1:4000`.
+
+   ``` sh
+   bundle install
+   bundle exec jekyll serve
+   ```
+
 ## Usage
 
 ### Customization
