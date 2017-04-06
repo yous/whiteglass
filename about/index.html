@@ -112,6 +112,72 @@
 </code></pre>
 </div>
 
+<h2>Quick Start</h2>
+
+<ol>
+  <li>
+    <p>Generate a new Jekyll blog:</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>jekyll new blog --skip-bundle
+<span class="nb">cd </span>blog
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Edit <code class="highlighter-rouge">Gemfile</code> to use whiteglass theme:</p>
+
+    <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-whiteglass"</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Edit <code class="highlighter-rouge">_config.yml</code> to use whiteglass theme and its plugins:</p>
+
+    <div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">theme</span><span class="pi">:</span> <span class="s">jekyll-whiteglass</span>
+<span class="s">gems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-archives</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+
+<span class="s">permalink</span><span class="pi">:</span> <span class="s">/:year/:month/:day/:title/</span>
+<span class="s">paginate_path</span><span class="pi">:</span> <span class="s">/posts/:num/</span>
+<span class="s">paginate</span><span class="pi">:</span> <span class="s">5</span>
+
+<span class="s">jekyll-archives</span><span class="pi">:</span>
+  <span class="s">enabled</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">categories</span>
+  <span class="s">layout</span><span class="pi">:</span> <span class="s">category_archives</span>
+  <span class="s">permalinks</span><span class="pi">:</span>
+    <span class="s">category</span><span class="pi">:</span> <span class="s">/categories/:name/</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Copy
+<a href="https://github.com/yous/whiteglass/blob/master/index.html"><code class="highlighter-rouge">index.html</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/about.md"><code class="highlighter-rouge">about.md</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/archives.md"><code class="highlighter-rouge">archives.md</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/feed.xml"><code class="highlighter-rouge">feed.xml</code></a>, and
+<a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="highlighter-rouge">_data/navigation.yml</code></a>
+from the theme:</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>rm index.md
+curl -L -O <span class="s2">"https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"</span>
+curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install gems and you’re good to go! The blog will be available on
+<code class="highlighter-rouge">http://127.0.0.1:4000</code>.</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>bundle install
+bundle <span class="nb">exec </span>jekyll serve
+</code></pre>
+    </div>
+  </li>
+</ol>
+
 <h2>Usage</h2>
 
 <h3>Customization</h3>
