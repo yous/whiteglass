@@ -12,3 +12,10 @@ layout: default
   </div>
 
 </article>
+
+{% if site.comments and page.comments != false %}
+  <div class"post-comments">
+  <hr />
+  {% include custom_comments_provider.html %}
+  </div>
+{% endif %}
