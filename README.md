@@ -230,6 +230,15 @@ title: How to configure jekyll-whiteglass
 keywords: jekyll, whiteglass, github pages
 ```
 
+YAML list is also available:
+
+``` yaml
+keywords:
+  - jekyll
+  - whiteglass
+  - github pages
+```
+
 #### Twitter
 
 - `site.twitter_username` sets `twitter:site` and `twitter:creator` meta tag
