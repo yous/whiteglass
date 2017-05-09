@@ -13,14 +13,14 @@ before_script:
   - git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
   - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
 script:
-  - git clone -b gh-pages --depth 1 --quiet "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" _site
+  - git clone -b gh-pages --depth 1 "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" _site >/dev/null 2>&1
   - rm -rf _site/*
   - bundle exec jekyll build
 after_success:
   - cd _site
   - git add -A
   - git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
-  - git push "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages --quiet
+  - git push "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages >/dev/null 2>&1
 branches:
   only:
     - master
