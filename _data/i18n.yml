@@ -1,0 +1,8 @@
+months:
+  de: ["Januar", "Februar", "März", "April", "Mai", "Juni",
+       "Juli", "August", "September", "Oktober", "November", "Dezember"]
+  de-AT: ["Jänner", "Feber", "März", "April", "Mai", "Juni",
+       "Juli", "August", "September", "Oktober", "November", "Dezember"]
+dateformat:
+  en: "%b %-d, %Y"
+  de: "%e. %B %Y"

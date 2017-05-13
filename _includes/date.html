@@ -1,0 +1,23 @@
+{% if include.lang != empty %}
+  {% assign plang = include.lang %}
+{% else %}
+  {% assign plang = page.lang | default: site.lang | default: "en" %}
+{% endif %}
+{% assign splang = plang | truncate: 2, "" %}
+{% if plang != "en" %}
+  {% assign dateformat = site.data.i18n.dateformat[plang] %}
+  {% unless dateformat %}
+    {% assign dateformat = site.data.i18n.dateformat[splang] %}
+  {% endunless %}
+  {% assign date = include.date | date: dateformat %}
+  {% assign eng_month = include.date | date: "%B" %}
+  {% assign num_month = include.date | date: "%m" | minus: 1 %}
+
+  {% if site.data.i18n.months[plang][num_month] %}
+    {{ date | replace:eng_month, site.data.i18n.months[plang][num_month] }}
+  {% else %}
+    {{ date | replace:eng_month, site.data.i18n.months[splang][num_month] }}
+  {% endif %}
+{% else %}
+  {{ include.date | date: site.data.i18n.dateformat[plang] }}
+{% endif %}
