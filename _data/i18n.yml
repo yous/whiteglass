@@ -6,3 +6,6 @@ months:
 dateformat:
   en: "%b %-d, %Y"
   de: "%e. %B %Y"
+morelink:
+  en: "Read on"
+  de: "Weiterlesen"
