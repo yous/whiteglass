@@ -180,6 +180,8 @@ title: "안녕하세요"
 lang: ko
 ```
 
+The date format and other fixed strings are translated using the `_data/i18n.yml` file. If your language is not yet included, feel free to open a [pull request](https://github.com/yous/whiteglass/pulls).
+
 ### Description
 
 `site.description` describes the site. This is mainly used in meta descriptions
