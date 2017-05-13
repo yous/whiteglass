@@ -9,14 +9,18 @@
   {% unless dateformat %}
     {% assign dateformat = site.data.i18n.dateformat[splang] %}
   {% endunless %}
+  {% unless dateformat %}
+    {% assign dateformat = site.data.i18n.dateformat["en"] %}
+  {% endunless %}
   {% assign date = include.date | date: dateformat %}
   {% assign eng_month = include.date | date: "%B" %}
   {% assign num_month = include.date | date: "%m" | minus: 1 %}
-
   {% if site.data.i18n.months[plang][num_month] %}
     {{ date | replace:eng_month, site.data.i18n.months[plang][num_month] }}
-  {% else %}
+  {% elsif site.data.i18n.months[splang][num_month] %}
     {{ date | replace:eng_month, site.data.i18n.months[splang][num_month] }}
+  {% else %}
+    {{ include.date | date: site.data.i18n.dateformat["en"] }}
   {% endif %}
 {% else %}
   {{ include.date | date: site.data.i18n.dateformat[plang] }}
