@@ -88,13 +88,14 @@ gem install jekyll-whiteglass
    [`archives.md`](https://github.com/yous/whiteglass/blob/master/archives.md),
    [`feed.xml`](https://github.com/yous/whiteglass/blob/master/feed.xml),
    [`robots.txt`](https://github.com/yous/whiteglass/blob/master/robots.txt),
+   [`_data/i18n.yml`](https://github.com/yous/whiteglass/blob/master/_data/i18n.yml),
    and [`_data/navigation.yml`](https://github.com/yous/whiteglass/blob/master/_data/navigation.yml)
    from the theme:
 
    ``` sh
    rm index.md
    curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml,robots.txt}"
-   curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
+   curl -L --create-dirs -o _data/#1 "https://github.com/yous/whiteglass/raw/master/_data/{navigation.yml,i18n.yml}"
    ```
 
 5. Install gems and you're good to go! The blog will be available on
@@ -104,6 +105,14 @@ gem install jekyll-whiteglass
    bundle install
    bundle exec jekyll serve
    ```
+
+## Upgrading
+
+### From Versions < 1.9.1
+
+Copy
+[`_data/i18n.yml`](https://github.com/yous/whiteglass/blob/master/_data/i18n.yml)
+from the theme.
 
 ## Deployment to GitHub Pages using Travis CI
 
