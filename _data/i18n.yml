@@ -11,3 +11,9 @@ dateformat:
 morelink:
   en: "Read on"
   de: "Weiterlesen"
+page-older:
+  en: "Older"
+  de: "Ältere Beiträge"
+page-newer:
+  en: "Newer"
+  de: "Neuere Beiträge"
