@@ -167,6 +167,16 @@ categories:
   - Idea
 ```
 
+### Comments
+
+whiteglass provides the ability to include your favourite commenting service, like [Disqus](https://disqus.com) or [Isso](https://posativ.org/isso).
+
+To enable comments on pages and posts:
+1. Overwrite the `_includes/custom_comments_provider.html` with your custom provider of comments.
+2. Add `comments: true` to your `_config.yml`.
+
+To disable comments on certain pages or posts specify `comments: false` in the front matter of the page or post.
+
 ### Metadata for SEO
 
 #### Keywords
