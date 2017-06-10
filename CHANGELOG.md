@@ -2,7 +2,7 @@
 
 ## HEAD
 
-- Add ability to provide a comments provider for pages and posts.
+- Add ability to provide a comments provider for pages and posts
 
 ## 1.3.0 (2017-02-20)
 

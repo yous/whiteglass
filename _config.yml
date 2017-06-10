@@ -37,7 +37,7 @@ twitter_image:
 facebook_app_id:
 facebook_image:
 google_analytics:
-comments: off
+comments: false
 
 # Plugins
 gems:
