@@ -11,10 +11,10 @@ layout: default
     {{ content }}
   </div>
 
-</article>
+  {% if site.comments != false and page.comments != false %}
+    <div class="post-comments">
+      {% include custom_comments_provider.html %}
+    </div>
+  {% endif %}
 
-{% if site.comments and page.comments != false %}
-  <div class="post-comments">
-    {% include custom_comments_provider.html %}
-  </div>
-{% endif %}
+</article>
