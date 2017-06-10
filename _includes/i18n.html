@@ -5,13 +5,13 @@
     {% assign plang = page.lang | default: site.lang | default: "en" %}
   {% endif %}
   {% assign splang = plang | truncate: 2, "" %}
-  {% assign val = site.data.i18n[include.value]" %}
+  {% assign val = site.data.i18n[include.value] %}
   {% if val[plang] %}
     {{val[plang]}}
   {% elsif val[splang] %}
     {{val[splang]}}
   {% else %}
-    {{val["en"]}}
+    {{include.default}}
   {% endif %}
 {% endcapture %}
 {{ text | strip_newlines }}

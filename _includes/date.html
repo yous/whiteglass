@@ -20,8 +20,8 @@
   {% elsif site.data.i18n.months[splang][num_month] %}
     {{ date | replace:eng_month, site.data.i18n.months[splang][num_month] }}
   {% else %}
-    {{ include.date | date: site.data.i18n.dateformat["en"] }}
+    {{ include.date | date: "%b %-d, %Y" }}
   {% endif %}
 {% else %}
-  {{ include.date | date: site.data.i18n.dateformat[plang] }}
+  {{ include.date | date: "%b %-d, %Y" }}
 {% endif %}

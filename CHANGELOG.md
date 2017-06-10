@@ -2,7 +2,7 @@
 
 ## HEAD
 
-- Internationalization of whiteglass.
+- Internationalization of whiteglass
 - Added German translation
 
 ## 1.9.1 (2019-08-26)
