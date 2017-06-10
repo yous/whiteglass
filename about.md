@@ -169,7 +169,7 @@ categories:
 
 ### Comments
 
-whiteglass provides the ability to include your favourite commenting service, like [Disqus](https://disqus.com).
+whiteglass provides the ability to include your favourite commenting service, like [Disqus](https://disqus.com) or [Isso](https://posativ.org/isso).
 
 To enable comments on pages and posts:
 1. Overwrite the `_includes/custom_comments_provider.html` with your custom provider of comments.
