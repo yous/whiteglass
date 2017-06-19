@@ -7,11 +7,11 @@
   {% assign splang = plang | truncate: 2, "" %}
   {% assign val = site.data.i18n[include.value] %}
   {% if val[plang] %}
-    {{val[plang]}}
+    {{ val[plang] }}
   {% elsif val[splang] %}
-    {{val[splang]}}
+    {{ val[splang] }}
   {% else %}
-    {{include.default}}
+    {{ include.default }}
   {% endif %}
 {% endcapture %}
 {{ text | strip_newlines }}
