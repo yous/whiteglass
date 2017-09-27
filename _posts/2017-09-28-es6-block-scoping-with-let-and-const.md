@@ -64,4 +64,5 @@ console.log(nbr); // Reference Error: nbr is not defined
 let nbr = 42;
 {% endhighlight %}
 
-This Reference Error is technically called a Temporal Dead Zone (TDZ) error because you are accessing a variable that's been declared but not yet initialized.
+<!-- This Reference Error is technically called a Temporal Dead Zone (TDZ) error because you are accessing a variable that's been declared but not yet initialized. -->
+이 참조 오류는 선언되었지만 아직 초기화되지 않은 변수에 액세스하고 있기 때문에 기술적으로 TDZ (Temporal Dead Zone) 오류라고합니다.
