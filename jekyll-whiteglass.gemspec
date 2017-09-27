@@ -3,11 +3,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-whiteglass"
   spec.version       = "1.3.0"
-  spec.authors       = ["Chayoung You"]
-  spec.email         = ["yousbe@gmail.com"]
+  spec.authors       = ["shimdh"]
+  spec.email         = ["shimdh@gmail.com"]
 
   spec.summary       = %q{Minimal, responsive Jekyll theme for hackers.}
-  spec.homepage      = "https://github.com/yous/whiteglass"
+  spec.homepage      = "https://github.com/shimdh/shimdh.github.io"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select do |f|
