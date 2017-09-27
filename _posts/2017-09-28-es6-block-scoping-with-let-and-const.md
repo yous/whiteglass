@@ -22,9 +22,11 @@ console.log(nbr);
 <!-- We now know that var is bound to function scope, whereas let and const are block scopes, which means if you've got a set of curly brackets (a block of code), you have a block scope. -->
 우리는 var로 정의된 변수들이 함수 범위안에 묶여 있음을 알고있습니다. 그리고 let과 const는 블록범위내에 존재합니다. 즉, 중괄호 (코드 블록)가 있으면 블록 범위가 있습니다.
 
-On the other hand, unlike let, const creates immutable variables.
+<!-- On the other hand, unlike let, const creates immutable variables. -->
+반면 const는 let과 달리 불변 변수를 만듭니다.
 
-The values of the variables created using const need to be assigned during declaration and cannot be changed later in the program.
+<!-- The values of the variables created using const need to be assigned during declaration and cannot be changed later in the program. -->
+const를 사용하여 생성 된 변수의 값은 선언 중에 지정해야하며 나중에 프로그램에서 변경할 수 없습니다.
 
 {% highlight js %}
 const value = 42;
@@ -34,10 +36,10 @@ console.log(value); // 42
 value = 1000; // TypeError
 {% endhighlight %}
 
+주의: const 변수의 값을 변경하려고 시도하면 typeerror가 발생합니다.
 
-NOTE: trying to change the value of a const variable will throw a typeerror.
-
-Make sure that you always initialize the variable with a value declared using const; otherwise it will throw an error.
+<!-- Make sure that you always initialize the variable with a value declared using const; otherwise it will throw an error. -->
+const를 사용하여 선언 된 값은 항상 변수를 초기화해야합니다. 그렇지 않으면 오류가 발생합니다.
 
 {% highlight js %}
 const item; // SyntaxError: Missing initializer in const declaration
