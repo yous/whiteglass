@@ -2,7 +2,7 @@
 layout: post
 ---
 
-### Block Scoping with let and const
+<!-- ### Block Scoping with let and const -->
 
 <!-- Quite simply, block scoping means that a new scope is created between a pair of { }. -->
 간단히 말해, 블록 범위 지정은 {} 쌍 사이에 새로운 범위가 만들어 짐을 의미합니다.

@@ -37,5 +37,3 @@ var price = 10; // Global Declaration
 console.log(price); // 10
 {% endhighlight %}
 
-### Block Scoping with let and const
-
