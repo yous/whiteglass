@@ -45,11 +45,14 @@ const를 사용하여 선언 된 값은 항상 변수를 초기화해야합니�
 const item; // SyntaxError: Missing initializer in const declaration
 {% endhighlight %}
 
-If you know that the value of your variables is not going to change throughout your code, you should be using const; otherwise use let to declare your variables.
+<!-- If you know that the value of your variables is not going to change throughout your code, you should be using const; otherwise use let to declare your variables. -->
+변수의 값이 코드 전체에서 변경되지 않는다는 것을 알고 있다면 const를 사용해야합니다. 그렇지 않으면 let을 사용하여 변수를 선언하십시오.
 
-We recommend moving away from the practice of using var to declare variables as it is cleaner, more efficient, and easy to debug if you use block scoping. let and const avoid the source of misunderstanding, especially for programmers with expectations set by languages with block scope.
+<!-- We recommend moving away from the practice of using var to declare variables as it is cleaner, more efficient, and easy to debug if you use block scoping. let and const avoid the source of misunderstanding, especially for programmers with expectations set by languages with block scope. -->
+블럭 범위 지정을 사용하면 변수를 선언 할 때 변수를 사용하는 것이 더 깔끔하고 효율적이며 디버깅하기 쉽도록 변수를 선언하는 것이 좋습니다. let과 const는 오해의 근원을 피합니다. 특히 블록 범위를 가진 언어에 의해 기대되는 기대치를 가진 프로그래머에게는 더욱 그렇습니다.
 
-let and const throw an exception if you try to access the variables declared by them outside the blocks they were declared and do away with hoisting, helping you localize the effects of your code fragments.
+<!-- let and const throw an exception if you try to access the variables declared by them outside the blocks they were declared and do away with hoisting, helping you localize the effects of your code fragments. -->
+let 및 const는 선언 된 블록 외부에서 선언 된 변수에 액세스하려고 시도하면 예외를 발생시킵니다. 그리고 코드를 조각으로 나누어주는 데 도움이됩니다.
 
 {% highlight js %}
 console.log(nbr); // undefined
