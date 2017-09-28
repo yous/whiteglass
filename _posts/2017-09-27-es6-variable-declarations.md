@@ -2,7 +2,7 @@
 layout: post
 ---
 
-<!-- ### Variable Declarations: let, const, and Block Scoping -->
+### Variable Declarations: let, const, and Block Scoping
 
 <!-- In the past, all variables in JavaScript were declared using the keyword var. -->
 과거에는 JavaScript의 모든 변수가 var 키워드를 사용하여 선언되었습니다.
