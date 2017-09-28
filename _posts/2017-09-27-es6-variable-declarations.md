@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "Variable Declarations: let, const, and Block Scoping"
 ---
 
 ### Variable Declarations: let, const, and Block Scoping
