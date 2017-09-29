@@ -33,6 +33,8 @@ var price = 10; // 전역선언
 console.log(price); // 10
 {% endhighlight %}
 
+---
+
 ### Block Scoping with let and const
 
 {% highlight js %}
@@ -68,6 +70,8 @@ var nbr = 42;
 console.log(nbr); // Reference Error: nbr is not defined
 let nbr = 42;
 {% endhighlight %}
+
+---
 
 ### More on Temporal Dead Zones
 
@@ -113,6 +117,8 @@ obj.key = 42;
 console.log(obj); // {}
 {% endhighlight %}
 
+---
+
 ### Variables Declarations in loops
 
 {% highlight js %}
@@ -135,6 +141,8 @@ for (const i=0; i<3; i++) {
 
 // TypeError: Assignment to constant variable (due to i++)
 {% endhighlight %}
+
+---
 
 ### Variable Declarations with Function Parameters and Global Scope
 
@@ -164,6 +172,8 @@ var isGlobal = "what up";
 global.isGlobal //'what up'
 global.notGlobal // undefined
 {% endhighlight %}
+
+---
 
 ### Arrow Functions
 
@@ -213,3 +223,89 @@ var getNumber = function(data) {
     };
 };
 {% endhighlight %}
+
+---
+
+### Using Arrow Functions to Create IIFEs
+
+{% highlight js %}
+var fn = function(number) {
+    return {
+        getNumber: function() {
+            return number;
+    }
+};
+}(42);
+
+console.log(fn.getNumber()); // 42
+{% endhighlight %}
+
+{% highlight js %}
+var fn = ((number) => {
+    return {
+        getNumber: function() {
+            return number;
+    }
+    };
+})(42);
+
+console.log(fn.getNumber()); // 42
+{% endhighlight %}
+
+---
+
+### A Tale about this
+
+#### Function Invocation
+
+{% highlight js %}
+function getContext() {
+    console.log(this); // Global or Window
+}
+{% endhighlight %}
+
+{% highlight js %}
+if (this === window) {
+    console.log("this refers to the Global context");
+}
+{% endhighlight %}
+
+#### Method Invocation
+
+{% highlight js %}
+let myObj = {
+    name: 'fancy',
+    operation: function() {
+        console.log(this);
+    }
+}
+
+myObj.operation(); // { name: 'fancy', operation: [Function: operation]}
+{% endhighlight %}
+
+
+{% highlight js %}
+let x = myObj.operation;
+x(); // Window
+{% endhighlight %}
+
+
+{% highlight js %}
+let x = myObj.operation;
+x(); // Window
+
+x.call(myObj); // { name: 'fancy', operation: [function]}
+{% endhighlight %}
+
+#### Constructor Invocation
+
+{% highlight js %}
+function Employee(name, department, salary) {
+    this.name = name;
+    this.department = department;
+    this.salary = salary;
+
+    console.log("Welcome " + this.name + "!");
+}
+{% endhighlight %}
+
