@@ -690,6 +690,10 @@ I am line-two`);
 // I am line-two
 {% endhighlight %}
 
+---
+
+### Tagged Template Literals
+
 {% highlight js %}
 output`Hi, my name is ${name} and I love ${language}`;
 {% endhighlight %}
