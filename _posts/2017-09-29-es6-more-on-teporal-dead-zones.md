@@ -41,3 +41,9 @@ obj.key = 42;
 console.log(obj.key); // 42
 obj = {}; // TypeError
 {% endhighlight %}
+
+{% highlight js %}
+const obj = Object.freeze({});
+obj.key = 42;
+console.log(obj); // {}
+{% endhighlight %}
