@@ -435,6 +435,352 @@ $('.btn').on('click', function() {
 });
 {% endhighlight %}
 
+---
+
+### Default Function Parameters
+
+{% highlight js %}
+function getSum(a,b) {
+    a = (a !== undefined) ? a : 1;
+    b = (b !== undefined) ? b : 41;
+
+    console.log( a + b );
+}
+
+getSum(); // 42
+getSum(1, 2); // 3
+getSum(10); // 51
+getSum(null, 6); // 6
+{% endhighlight %}
+
+
+{% highlight js %}
+var getSum2 = function(a = 1, b = 41) {
+    console.log(a + b);
+}
+getSum2(); // 42
+getSum2(1, 2); // 3
+getSum2(10); // 51
+getSum2(null, 6); // 6
+{% endhighlight %}
+
+{% highlight js %}
+var getAnswer = function(number = 42, item = "universe") {
+    console.log(number + " is the answer to " + item);
+}
+
+getAnswer(undefined, "life"); // 42 is the answer to life
+{% endhighlight %}
+
+{% highlight js %}
+var getName = function(firstName = "John", lastName = "Doe") {
+    console.log(firstName + " " + lastName);
+}
+
+getName("Jane"); // Jane Doe
+{% endhighlight %}
+
+{% highlight js %}
+var defaultName = "John";
+
+var getName = function(firstName = defaultName, lastName = "Doe") {
+    console.log(firstName + " " + lastName);
+}
+
+getName(); // John Doe
+{% endhighlight %}
+
+{% highlight js %}
+var getFirstName = () => "John";
+
+var getName = function(firstName = getFirstName(), lastName = "Doe") {
+    console.log(firstName + " " + lastName);
+}
+
+getName(); // John Doe
+{% endhighlight %}
+
+{% highlight js %}
+var getName = function(firstName, lastName = "Doe") {
+    console.log(arguments.length);
+}
+
+getName("John"); // 1
+{% endhighlight %}
+
+{% highlight js %}
+var getPrice = function(quantity = price, price = 5) {
+    console.log(quantity + ", " + price);
+}
+
+getPrice(); // ReferenceError: price is not defined
+{% endhighlight %}
+
+{% highlight js %}
+var getNumber = new Function("number = 42", "return number;");
+
+console.log(getNumber()); // 42
+{% endhighlight %}
+
+---
+
+### Rest and Spread Operators
+
+{% highlight js %}
+var showCollections = function (id, ...collection) {
+    console.log(collection instanceof Array);
+};
+
+showCollections(42, "movies", "music"); // true
+{% endhighlight %}
+
+{% highlight js %}
+var showCollections = function (id, ...collection) {
+    console.log(collection);
+};
+
+showCollections(42, "movies", "music"); // ["movies", "music"]
+{% endhighlight %}
+
+{% highlight js %}
+var showCollections = function (id, ...collection) {};
+
+console.log(showCollections.length); // 1
+{% endhighlight %}
+
+{% highlight js %}
+var showCollections = function (id, ...collection) {
+    console.log(arguments.length);
+};
+
+showCollections(123, "movies", "music"); // 3
+{% endhighlight %}
+
+{% highlight js %}
+var getFirst = new Function("...args", "return args[0]");
+
+console.log(getFirst(1, 2)); // 1
+{% endhighlight %}
+
+---
+
+### The Spread Operator
+
+{% highlight js %}
+let values = [200, 300, 400];
+let newSet = [100, ...values, 500]
+
+console.log(newSet); // [100, 200, 300, 400, 500]
+{% endhighlight %}
+
+{% highlight js %}
+let numbers = [-25, 100, 42, -1000];
+
+console.log(Math.max(...numbers, 900)); // 900
+{% endhighlight %}
+
+{% highlight js %}
+function printInput(...input) {
+    console.log(input);
+}
+
+let input = [,,];
+
+printInput(...input); // [undefined, undefined]
+{% endhighlight %}
+
+---
+
+### Object Literal Extensions
+
+{% highlight js %}
+var price = 4.20, quantity = 20;
+
+var invoiceData = {
+    price: price,
+    quantity: quantity
+};
+
+console.log(invoiceData)
+{% endhighlight %}
+
+{% highlight js %}
+const price = 4.20, quantity = 20;
+const invoiceData = {
+    price,
+    quantity
+};
+
+console.log(invoiceData);
+{% endhighlight %}
+
+{% highlight js %}
+const price = 4.20, quantity = 20;
+const invoiceData = {
+    price,
+    quantity,
+    calculateTotal() {
+        return this.price * this.quantity;
+    }
+};
+
+console.log(invoiceData.calculateTotal());
+{% endhighlight %}
+
+{% highlight js %}
+const field = 'dynamicRandom';
+const price = 5.99;
+const quantity = 2;
+const invoiceData = {
+    [field]: price,
+    quantity,
+    calculateTotal() {
+        return this.price * this.quantity;
+    }
+};
+
+console.log(invoiceData);
+// { dynamicRandom: 5.99,
+// quantity: 2,
+// caculateTotal: [Function: calculateTotal] }
+{% endhighlight %}
+
+{% highlight js %}
+const field = 'dynamicRandom';
+const price = 5.99, quantity = 2;
+const invoiceData = {
+    [field + "-01"]: price,
+    quantity,
+    calculateTotal() {
+        return this.price * this.quantity;
+    }
+};
+
+console.log(invoiceData);
+// { dynamicRandom-01: 5.99,
+// quantity: 2,
+// caculateTotal: [Function: calculateTotal] }
+{% endhighlight %}
+
+---
+
+### Template Literals and Delimiters
+
+{% highlight js %}
+let user = `Kevin`;
+{% endhighlight %}
+
+{% highlight js %}
+console.log(`Hi ${user}!`); // Hi Kevin!
+{% endhighlight %}
+
+
+{% highlight js %}
+let a = 10;
+let b = 20;
+
+console.log(`Sum of ${a} and ${b} is ${a+b}`);
+{% endhighlight %}
+
+{% highlight js %}
+console.log(`I am line-one
+I am line-two`);
+
+// I am line-one
+// I am line-two
+{% endhighlight %}
+
+{% highlight js %}
+output`Hi, my name is ${name} and I love ${language}`;
+{% endhighlight %}
+
+{% highlight js %}
+output(["Hi, my name is ", " and I love ", ""], name, language)
+{% endhighlight %}
+
+{% highlight js %}
+function output(literals, ...substitutions) {
+    let result = "";
+
+    // concatenate literal strings and substitutions
+    for (let i=0; i<substitutions.length; i++) {
+        result += literals[i] + substitutions[i];
+    }
+
+    // concatenate the last element in the literals array
+    // there is always one element more than the substitutions array
+    result += literals[literals.length - 1];
+
+    return result;
+}
+
+const name = 'John',
+    language = 'JavaScript';
+
+let text = output`Hi, my name is ${name} and I love ${language}`
+
+console.log(text); // Hi, my name is John and I love JavaScript
+{% endhighlight %}
+
+---
+
+### Iterating with for...of
+
+{% highlight js %}
+let names = ['matt', 'smith', 'jack'];
+
+for (let i = 0; i<names.length; i++) {
+    console.log(names[i]);
+}
+
+// matt
+// smith
+// jack
+{% endhighlight %}
+
+{% highlight js %}
+let names = ['matt', 'smith', 'jack'];
+
+for (let name of names) {
+    console.log(name);
+}
+
+// matt
+// smith
+// jack
+{% endhighlight %}
+
+{% highlight js %}
+for (let char of 'Bye') {
+    console.log(char);
+}
+
+// B
+// y
+// e
+{% endhighlight %}
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
+<!-- {% highlight js %}
+{% endhighlight %} -->
+
 <!-- {% highlight js %}
 {% endhighlight %} -->
 
