@@ -307,5 +307,9 @@ function Employee(name, department, salary) {
 
     console.log("Welcome " + this.name + "!");
 }
+
+let john = new Employee('John', 'Sales', 4000);
+// Welcome John!
+
 {% endhighlight %}
 
