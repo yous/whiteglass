@@ -333,9 +333,7 @@ function Employee(firstName, department, salary) {
 }
 
 let jim = new Employee('Jim', 'Finance', 5200);
-{% endhighlight %}
 
-{% highlight js %}
 let printInfo = jim.getInfo();
 printInfo(); // undefined from undefined earns undefined
 {% endhighlight %}
@@ -388,7 +386,7 @@ var details = {
 };
 
 var details2 = {
-number: 84
+    number: 84
 };
 
 details.operation().bind(details2)(); // 42
