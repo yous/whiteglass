@@ -36,6 +36,7 @@ console.log( x, y, z ); // a b c
 console.log( a, b, c ); // 1 2 3
 {% endhighlight %}
 
+---
 ### Object Destructuring Syntax
 
 {% highlight js %}
@@ -77,6 +78,7 @@ let { x, y }; // syntax error!
 const { x, y }; // syntax error!
 {% endhighlight %}
 
+---
 ### Assignment Using Destructuring
 
 {% highlight js %}
@@ -104,6 +106,7 @@ console.log(name); // "Apples"
 console.log(quantity); // 5
 {% endhighlight %}
 
+---
 ### Default Values
 
 {% highlight js %}
@@ -149,6 +152,7 @@ var obj = { a: { b: 42 }, c: { b: c } };
 console.log( a.b, b.b, c.b );
 {% endhighlight %}
 
+---
 ### Nested Destructuring
 
 {% highlight js %}
@@ -217,6 +221,7 @@ console.log(english.score); // 7
 console.log(minScore); // 0
 {% endhighlight %}
 
+---
 ### Destructuring Using the rest Syntax
 
 {% highlight js %}
@@ -240,6 +245,7 @@ var [num1, ...num2,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 {% endhighlight %}
 
+---
 ### Destructured Parameters
 
 {% highlight js %}
