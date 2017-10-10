@@ -9,10 +9,10 @@ title: "ES6: New Syntax"
 ### Variable Declarations: let, const, and Block Scoping
 
 {% highlight js %}
-var price = 10; // 전역선언
+var price = 10; // Global Declaration
 
 function showPrice() {
-    var price = 12; // var를 사용한 로컬선언
+    var price = 12; // vLocal Declaration using var
     console.log(price); // 12
 }
 
@@ -23,10 +23,10 @@ console.log(price); // 10
 
 {% highlight js %}
 // IIFE
-var price = 10; // 전역선언
+var price = 10; // Global Declaration
 
 (function () {
-    var price = 12; // var를 사용한 로컬선언
+    var price = 12; // Local Declaration using var
     console.log(price); // 12
 })();
 
