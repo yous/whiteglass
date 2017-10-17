@@ -15,13 +15,14 @@ title: "Coding Convention"
   - vscode
     - Prettier설치 하면 된다
     - settings.json
-
+{% highlight js %}
           {
            "prettier.eslintIntegration": true,
            // "prettier.tabWidth": 4,
            "eslint.autoFixOnSave": true,
            "editor.snippetSuggestions": "top"
           }
+{% endhighlight %}
 
 - JSDoc을 이용하여 함수의 파라미터 와 리턴값 등을 꼭 정리하자
 - 변수 선언 시 var를 사용하지 않고 let, const을 사용하기
