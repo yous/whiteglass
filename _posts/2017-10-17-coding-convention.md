@@ -7,18 +7,18 @@ title: "Coding Convention"
 
 - 라인당 120자로 제한
 - 라인 120자를 넘어갈 경우 강제 완성을 위해 Prettier를 설치해서 사용 해야 한다
-	- webstorm
-		- [https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2](https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2)
-		- —write —trailing-comma=all —tab-width 4 —print-width 120 —single-quote $FilePathRelativeToProjectRoot$
-	- vscode
-		- Prettier 설치 하면 된다
-		- settings.json
+  - webstorm
+    - [https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2](https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2)
+    - —write —trailing-comma=all —tab-width 4 —print-width 120 —single-quote $FilePathRelativeToProjectRoot$
+  - vscode
+    - Prettier 설치 하면 된다
+    - settings.json
 {% highlight js %}
 {
-	"prettier.eslintIntegration": true,
-	// "prettier.tabWidth": 4,
-	"eslint.autoFixOnSave": true,
-	"editor.snippetSuggestions": "top"
+  "prettier.eslintIntegration": true,
+  // "prettier.tabWidth": 4,
+  "eslint.autoFixOnSave": true,
+  "editor.snippetSuggestions": "top"
 }
 {% endhighlight %}
 
@@ -29,13 +29,13 @@ title: "Coding Convention"
 
 // 올바른 예시:
 if (true) {
-	console.log("winning");
+  console.log("winning");
 }
 
 // 잘못된 예시:
 if (true)
 {
-	console.log("losing");
+  console.log("losing");
 }
 {% endhighlight %}
 
@@ -86,13 +86,13 @@ File.FULL_PERMISSIONS = 0777;
 // 올바른 예시:
 let a = 0;
 if (a !== '') {
-	console.log('winning');
+  console.log('winning');
 }
 
 // 잘못된 예시:
 let a = 0;
 if (a == '') {
-	console.log('losing');
+  console.log('losing');
 }
 {% endhighlight %}
 
@@ -101,26 +101,26 @@ if (a == '') {
 
 // 올바른 예시:
 function isPercentage(val) {
-	if (val < 0) {
-		return false;
-	}
-	if (val > 100) {
-		return false;
-	}
-	return true;
+  if (val < 0) {
+    return false;
+  }
+  if (val > 100) {
+    return false;
+  }
+return true;
 }
 
 // 잘못된 예시:
 function isPercentage(val) {
-	if (val >= 0) {
-		if (val < 100) {
-			return true;
-		} else {
-			return false;
-		}
-	} else {
-		return false;
-	}
+  if (val >= 0) {
+    if (val < 100) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
 }
 {% endhighlight %}
 
@@ -130,42 +130,42 @@ function isPercentage(val) {
 // 올바른 방법:
 
 User
-	.findOne({name: 'foo'})
-	.populate('bar')
-	.exec(function(err, user) {
-		if (err) {
-			return false;
-		}
-		return true;
-	});
+  .findOne({name: 'foo'})
+  .populate('bar')
+  .exec(function(err, user) {
+    if (err) {
+      return false;
+    }
+    return true;
+  });
 
 
 // 잘못된 방법:
 
-	User
-	.findOne({name: 'foo'})
-	.populate('bar')
-	.exec(function(err, user) {
-			if (err) {
-				return false;
-			}
-			return true;
-	});
+  User
+  .findOne({name: 'foo'})
+  .populate('bar')
+  .exec(function(err, user) {
+      if (err) {
+        return false;
+      }
+      return true;
+  });
 
-	User.findOne({name: 'foo'})
-		.populate('bar')
-		.exec(function(err, user) {
-			if (err) {
-				return false;
-			}
-			return true;
-		});
+  User.findOne({name: 'foo'})
+    .populate('bar')
+    .exec(function(err, user) {
+      if (err) {
+        return false;
+      }
+      return true;
+    });
 
-	User.findOne({name: 'foo'}).populate('bar').exec(function(err, user) {
-		if (err) {
-			return false;
-		}
-		return true;
+  User.findOne({name: 'foo'}).populate('bar').exec(function(err, user) {
+    if (err) {
+      return false;
+    }
+    return true;
 });
 {% endhighlight %}
 
@@ -177,14 +177,14 @@ User
 
 // bad
 const superman = {
-	default: { clark: 'kent' },
-	private: true,
+  default: { clark: 'kent' },
+  private: true,
 };
 
 // good
 const superman = {
-	defaults: { clark: 'kent' },
-	hidden: true,
+  defaults: { clark: 'kent' },
+  hidden: true,
 };
 {% endhighlight %}
 
@@ -203,19 +203,19 @@ const item = {};
 
 // bad
 const atom = {
-	value: 1,
+  value: 1,
 
-	addValue: function (value) {
-		return atom.value + value;
-	},
+  addValue: function (value) {
+    return atom.value + value;
+  },
 };
 
 // good
 const atom = {
-	value: 1,
-	addValue(value) {
-		return atom.value + value;
-	},
+  value: 1,
+  addValue(value) {
+    return atom.value + value;
+  },
 };
 {% endhighlight %}
 
@@ -226,12 +226,12 @@ const lukeSkywalker = 'Luke Skywalker';
 
 // bad
 const obj = {
-	lukeSkywalker: lukeSkywalker,
+  lukeSkywalker: lukeSkywalker,
 };
 
 // good
 const obj = {
-	lukeSkywalker,
+  lukeSkywalker,
 };
 {% endhighlight %}
 
@@ -243,22 +243,22 @@ const lukeSkywalker = 'Luke Skywalker';
 
 // bad
 const obj = {
-	episodeOne: 1,
-	twoJediWalkIntoACantina: 2,
-	lukeSkywalker,
-	episodeThree: 3,
-	mayTheFourth: 4,
-	anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  lukeSkywalker,
+  episodeThree: 3,
+  mayTheFourth: 4,
+  anakinSkywalker,
 };
 
 // good
 const obj = {
-	lukeSkywalker,
-	anakinSkywalker,
-	episodeOne: 1,
-	twoJediWalkIntoACantina: 2,
-	episodeThree: 3,
-	mayTheFourth: 4,
+  lukeSkywalker,
+  anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  episodeThree: 3,
+  mayTheFourth: 4,
 };
 {% endhighlight %}
 
@@ -293,7 +293,7 @@ const itemsCopy = [];
 let i;
 
 for (i = 0; i $lt; len; i++) {
-	itemsCopy[i] = items[i];
+  itemsCopy[i] = items[i];
 }
 
 
@@ -306,21 +306,21 @@ const itemsCopy = [...items];
 
 // bad
 function getFullName(user) {
-	const firstName = user.firstName;
-	const lastName = user.lastName;
+  const firstName = user.firstName;
+  const lastName = user.lastName;
 
-	return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`;
 }
 
 // good
 function getFullName(user) {
-	const { firstName, lastName } = user;
-	return `${firstName} ${lastName}`;
+  const { firstName, lastName } = user;
+  return `${firstName} ${lastName}`;
 }
 
 // best
 function getFullName({ firstName, lastName }) {
-	return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`;
 }
 {% endhighlight %}
 
@@ -339,17 +339,17 @@ const name = 'Capt. Janeway';
 
 // bad
 function sayHi(name) {
-	return 'How are you, ' + name + '?';
+  return 'How are you, ' + name + '?';
 }
 
 // bad
 function sayHi(name) {
-	return ['How are you, ', name, '?'].join();
+  return ['How are you, ', name, '?'].join();
 }
 
 // good
 function sayHi(name) {
-	return `How are you, ${name}?`;
+  return `How are you, ${name}?`;
 }
 {% endhighlight %}
 
@@ -370,24 +370,24 @@ function foo() {
 
 // really bad
 function handleThings(opts) {
-	// 안되! 함수의 매개변수를 조작하지 않습니다.
-	// 만약 opts가 falsy 인 경우는 바란대로 객체가 설정됩니다.
-	// 그러나 미묘한 버그를 일으키는 원인이 될수도 있습니다.
-	opts = opts || {};
-	// ...
+  // 안되! 함수의 매개변수를 조작하지 않습니다.
+  // 만약 opts가 falsy 인 경우는 바란대로 객체가 설정됩니다.
+  // 그러나 미묘한 버그를 일으키는 원인이 될수도 있습니다.
+  opts = opts || {};
+  // ...
 }
 
 // still bad
 function handleThings(opts) {
-	if (opts === void 0) {
-		opts = {};
-	}
-	// ...
+  if (opts === void 0) {
+    opts = {};
+  }
+  // ...
 }
 
 // good
 function handleThings(opts = {}) {
-	// ...
+  // ...
 }
 {% endhighlight %}
 
@@ -396,12 +396,12 @@ function handleThings(opts = {}) {
 
 // bad
 function handleThings(opts = {}, name) {
-	// ...
+  // ...
 }
 
 // good
 function handleThings(name, opts = {}) {
-	// ...
+  // ...
 }
 {% endhighlight %}
 
@@ -410,12 +410,12 @@ function handleThings(name, opts = {}) {
 
 // bad
 [1, 2, 3].map(number => 'As time went by, the string containing the ' +
-	`${number} became much longer. So we needed to break it over multiple ` +
-	'lines.');
+  `${number} became much longer. So we needed to break it over multiple ` +
+  'lines.');
 
 // good
 [1, 2, 3].map(number => ( `As time went by, the string containing the ${number} became much ` +
-	'longer. So we needed to break it over multiple lines.'
+  'longer. So we needed to break it over multiple lines.'
 ));
 {% endhighlight %}
 
@@ -424,25 +424,25 @@ function handleThings(name, opts = {}) {
 
 // bad
 function Queue(contents = []) {
-	this._queue = [...contents];
+  this._queue = [...contents];
 }
 
 Queue.prototype.pop = function () {
-	const value = this._queue[0];
-	this._queue.splice(0, 1);
-	return value;
+  const value = this._queue[0];
+  this._queue.splice(0, 1);
+  return value;
 }
 
 // good
 class Queue {
-	constructor(contents = []) {
-		this._queue = [...contents];
-	}
-	pop() {
-		const value = this._queue[0];
-		this._queue.splice(0, 1);
-		return value;
-	}
+  constructor(contents = []) {
+    this._queue = [...contents];
+  }
+  pop() {
+    const value = this._queue[0];
+    this._queue.splice(0, 1);
+    return value;
+  }
 }
 {% endhighlight %}
 
@@ -453,19 +453,19 @@ class Queue {
 const inherits = require('inherits');
 
 function PeekableQueue(contents) {
-	Queue.apply(this, contents);
+  Queue.apply(this, contents);
 }
 
 inherits(PeekableQueue, Queue);
 PeekableQueue.prototype.peek = function () {
-	return this._queue[0];
+  return this._queue[0];
 }
 
 // good
 class PeekableQueue extends Queue {
-	peek() {
-		return this._queue[0];
-	}
+  peek() {
+    return this._queue[0];
+  }
 }
 {% endhighlight %}
 
@@ -500,8 +500,8 @@ import AirbnbStyleGuide from './AirbnbStyleGuide';
 
 // bad
 let i, len, dragonball,
-	items = getItems(),
-	goSportsTeam = true;
+  items = getItems(),
+  goSportsTeam = true;
 
 // bad
 let i;
@@ -523,22 +523,22 @@ let length;
 
 // bad
 if (name !== '') {
-	// ...stuff...
+  // ...stuff...
 }
 
 // good
 if (name) {
-	// ...stuff...
+  // ...stuff...
 }
 
 // bad
 if (collection.length > 0) {
-	// ...stuff...
+  // ...stuff...
 }
 
 // good
 if (collection.length) {
-	// ...stuff...
+  // ...stuff...
 }
 {% endhighlight %}
 
@@ -547,32 +547,32 @@ if (collection.length) {
 
 // bad
 const story = [
-	once
-	, upon
-	, aTime
+  once
+  , upon
+  , aTime
 ];
 
 // good
 const story = [
-	once,
-	upon,
-	aTime,
+  once,
+  upon,
+  aTime,
 ];
 
 // bad
 const hero = {
-	firstName: 'Ada'
-	, lastName: 'Lovelace'
-	, birthYear: 1815
-	, superPower: 'computers'
+  firstName: 'Ada'
+  , lastName: 'Lovelace'
+  , birthYear: 1815
+  , superPower: 'computers'
 };
 
 // good
 const hero = {
-	firstName: 'Ada',
-	lastName: 'Lovelace',
-	birthYear: 1815,
-	superPower: 'computers',
+  firstName: 'Ada',
+  lastName: 'Lovelace',
+  birthYear: 1815,
+  superPower: 'computers',
 };
 {% endhighlight %}
 
@@ -616,24 +616,24 @@ this._firstName = 'Panda';
 
 // bad
 function foo() {
-	const self = this;
-	return function () {
-		console.log(self);
-	};
+  const self = this;
+  return function () {
+    console.log(self);
+  };
 }
 
 // bad
 function foo() {
-	const that = this;
-	return function () {
-		console.log(that);
-	};
+  const that = this;
+  return function () {
+    console.log(that);
+  };
 }
 
 // good
 function foo() {
-	return () => {
-		console.log(this);
-	};
+  return () => {
+    console.log(this);
+  };
 }
 {% endhighlight %}
