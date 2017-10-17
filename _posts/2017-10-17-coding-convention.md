@@ -3,8 +3,6 @@ layout: post
 title: "Coding Convention"
 ---
 
-# coding convention
-
 # 기본적으로 eslint 적용
 
 - 라인당 120자로 제한
@@ -13,7 +11,7 @@ title: "Coding Convention"
     - [https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2](https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2)
     - —write —trailing-comma=all —tab-width 4 —print-width 120 —single-quote $FilePathRelativeToProjectRoot$
   - vscode
-    - Prettier설치 하면 된다
+    - Prettier 설치 하면 된다
     - settings.json
       {% highlight js %}
         {
