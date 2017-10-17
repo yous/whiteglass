@@ -92,7 +92,7 @@ title: "Coding Convention"
       // 잘못된 예시:
       let a = 0;
       if (a == '') { 
-      console.log('losing');
+        console.log('losing');
       }
   {% endhighlight %}
   
@@ -133,10 +133,10 @@ title: "Coding Convention"
        .findOne({name: 'foo'})
        .populate('bar')
        .exec(function(err, user) {
-       if (err) {
-       return false;
-       }
-       return true;
+         if (err) {
+           return false;
+         }
+         return true;
        });
        
       
@@ -146,26 +146,26 @@ title: "Coding Convention"
       	.findOne({name: 'foo'})
       	.populate('bar')
       	.exec(function(err, user) {
-      	 if (err) {
-      	 return false;
-      	 }
-      	 return true;
+      	   if (err) {
+      	     return false;
+      	   }
+      	   return true;
       	});
       	 
       	User.findOne({name: 'foo'})
       	 .populate('bar')
       	 .exec(function(err, user) {
-      	 if (err) {
-      	 return false;
-      	 }
-      	 return true;
+      	   if (err) {
+      	     return false;
+      	   }
+      	   return true;
       	 });
       	 
       	User.findOne({name: 'foo'}).populate('bar').exec(function(err, user) {
-      	 if (err) {
-      	 return false;
-      	 }
-      	 return true;
+      	  if (err) {
+      	    return false;
+      	  }
+      	  return true;
       });
   {% endhighlight %}
 
@@ -213,9 +213,9 @@ title: "Coding Convention"
       // good
       const atom = { 
       	value: 1,
-       addValue(value) { 
-      		return atom.value + value; 
-      	},
+        addValue(value) { 
+          return atom.value + value; 
+        },
       };
   {% endhighlight %}
   
@@ -411,7 +411,7 @@ title: "Coding Convention"
       // bad
       [1, 2, 3].map(number => 'As time went by, the string containing the ' +
       	`${number} became much longer. So we needed to break it over multiple ` + 
-      'lines.');
+        'lines.');
       
       // good
       [1, 2, 3].map(number => ( `As time went by, the string containing the ${number} became much ` + 
