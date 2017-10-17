@@ -16,17 +16,18 @@ title: "Coding Convention"
     - Prettier설치 하면 된다
     - settings.json
       {% highlight js %}
-          {
+        {
            "prettier.eslintIntegration": true,
            // "prettier.tabWidth": 4,
            "eslint.autoFixOnSave": true,
            "editor.snippetSuggestions": "top"
-          }
+        }
       {% endhighlight %}
 
 - JSDoc을 이용하여 함수의 파라미터 와 리턴값 등을 꼭 정리하자
 - 변수 선언 시 var를 사용하지 않고 let, const을 사용하기
 - 여는 중괄호는 명령문과 같은 줄에
+  {% highlight js %}
 
       // 올바른 예시:
       if (true) { 
@@ -38,16 +39,20 @@ title: "Coding Convention"
       { 
       	console.log("losing");
       }
+  {% endhighlight %}
 
 - 변수, 속성 및 함수 이름에는 lower Camel Case 사용
+  {% highlight js %}
 
       // 올바른 예시:
       let adminUser = db.query('SELECT * FROM users ...');
       
       // 잘못된 예시:
       let admin_user = db.query('SELECT * FROM users ...');
-
+  {% endhighlight %}
+  
 - 클래스 이름에는 Upper Camel Case 사용
+  {% highlight js %}
 
       // 올바른 예시:
       class BankAccount() {
@@ -56,8 +61,10 @@ title: "Coding Convention"
       // 잘못된 예시:
       class bank_Account() {
       }
-
+  {% endhighlight %}
+  
 - 상수에는 대문자 사용
+  {% highlight js %}
 
       // 올바른 예시:
       const SECOND = 1 * 1000;
@@ -73,8 +80,10 @@ title: "Coding Convention"
       }
       
       File.FULL_PERMISSIONS = 0777;
-
+  {% endhighlight %}
+  
 - === 연산자 사용
+  {% highlight js %}
 
       // 올바른 예시:
       let a = 0;
@@ -87,8 +96,10 @@ title: "Coding Convention"
       if (a == '') { 
       console.log('losing');
       }
-
+  {% endhighlight %}
+  
 - 함수에서 일찍 반환
+  {% highlight js %}
 
       // 올바른 예시:
       function isPercentage(val) { 
@@ -113,8 +124,10 @@ title: "Coding Convention"
       		return false; 
       	}
       }
-
+  {% endhighlight %}
+  
 - Method Chaining을 원할 시에는 한 라인 당 하나의 메소드를 적는다.
+  {% highlight js %}
 
       // 올바른 방법:
       	 
@@ -156,11 +169,13 @@ title: "Coding Convention"
       	 }
       	 return true;
       });
+  {% endhighlight %}
 
 - 함수 내에 너무 많은 if, else는 가급적 금지
 - 변수명 선언 시 의미 있게 선언 혹은 약식으로 선언하더라도 의미 있게 선언
 - 비트 연산자는 되도록 사용하지 말자
 - 예약어를 키로 사용하지 말자
+  {% highlight js %}
 
       // bad
       const superman = { 
@@ -173,16 +188,20 @@ title: "Coding Convention"
       	defaults: { clark: 'kent' }, 
       	hidden: true,
       };
-
+  {% endhighlight %}
+  
 - 객체를 만들 때에는 리터럴 구문을 사용하자
+  {% highlight js %}
 
       // bad
       const item = new Object();
       
       // good
       const item = {};
-
+  {% endhighlight %}
+  
 - 메소드에 단축 구문을 사용하자
+  {% highlight js %}
 
       // bad
       const atom = { 
@@ -200,8 +219,10 @@ title: "Coding Convention"
       		return atom.value + value; 
       	},
       };
-
+  {% endhighlight %}
+  
 - 속성에 단축 구문을 사용하자
+  {% highlight js %}
 
       const lukeSkywalker = 'Luke Skywalker';
       
@@ -214,8 +235,10 @@ title: "Coding Convention"
       const obj = { 
       	lukeSkywalker,
       };
-
+  {% endhighlight %}
+  
 - 속성의 단축 구문은 객체 선언의 시작 부분에 무리를 지어 주자
+  {% highlight js %}
 
       const anakinSkywalker = 'Anakin Skywalker';
       const lukeSkywalker = 'Luke Skywalker';
@@ -239,16 +262,20 @@ title: "Coding Convention"
       	episodeThree: 3, 
       	mayTheFourth: 4,
       };
-
+  {% endhighlight %}
+  
 - 배열을 만들 때 리터럴 구문을 사용하자
+  {% highlight js %}
 
       // bad
       const items = new Array();
       
       // good
       const items = [];
-
+  {% endhighlight %}
+  
 - 배열에 항목을 직접 대체 하지 말고 push를 사용하자
+  {% highlight js %}
 
       const someStack = [];
       
@@ -257,8 +284,10 @@ title: "Coding Convention"
       
       // good
       someStack.push('abracadabra');
-
+  {% endhighlight %}
+  
 - 배열을 복사하는 경우, 배열의 확장 연산자인 …을 사용하자
+  {% highlight js %}
 
       // bad
       const len = items.length;
@@ -272,8 +301,10 @@ title: "Coding Convention"
       
       // good
       const itemsCopy = [...items];
-
+  {% endhighlight %}
+  
 - 여러 속성에서 객체에 접근할 때 객체 구조화 대입을 사용하자
+  {% highlight js %}
 
       // bad
       function getFullName(user) { 
@@ -293,16 +324,20 @@ title: "Coding Convention"
       function getFullName({ firstName, lastName }) { 
       	return `${firstName} ${lastName}`;
       }
-
+  {% endhighlight %}
+  
 - 문자열에는 작은 따옴표 ''를 사용 하자
+  {% highlight js %}
 
       // bad
       const name = "Capt. Janeway";
       
       // good
       const name = 'Capt. Janeway';
-
+  {% endhighlight %}
+  
 - 프로그램에서 문자열을 생성하는 경우, 문자열 연결이 아닌 템플릿 문자열을 사용하자
+  {% highlight js %}
 
       // bad
       function sayHi(name) { 
@@ -318,8 +353,10 @@ title: "Coding Convention"
       function sayHi(name) { 
       	return `How are you, ${name}?`;
       }
-
+  {% endhighlight %}
+  
 - 함수 선언 대신에 함수 표현식을 사용하자
+  {% highlight js %}
 
       // bad
       const foo = function () {
@@ -328,8 +365,10 @@ title: "Coding Convention"
       // good
       function foo() {
       }
-
+  {% endhighlight %}
+  
 - 함수의 매개변수를 조작하지 말고 기본 매개변수를 사용하자
+  {% highlight js %}
 
       // really bad
       function handleThings(opts) { 
@@ -352,8 +391,10 @@ title: "Coding Convention"
       function handleThings(opts = {}) { 
       	// ...
       }
-
+  {% endhighlight %}
+  
 - 항상 기본 매개 변수는 앞쪽에 배치하자
+  {% highlight js %}
 
       // bad
       function handleThings(opts = {}, name) { 
@@ -364,8 +405,10 @@ title: "Coding Convention"
       function handleThings(name, opts = {}) { 
       	// ...
       }
-
+  {% endhighlight %}
+  
 - 구문의 길이가 여러 행에 걸치는 경우 가독성을 향상 시키기 위해 괄호안에 써주자
+  {% highlight js %}
 
       // bad
       [1, 2, 3].map(number => 'As time went by, the string containing the ' +
@@ -376,8 +419,10 @@ title: "Coding Convention"
       [1, 2, 3].map(number => ( `As time went by, the string containing the ${number} became much ` + 
       	'longer. So we needed to break it over multiple lines.'
       ));
-
+  {% endhighlight %}
+  
 - Prototype의 직접 조작을 피하고 항상 class를 사용하자
+  {% highlight js %}
 
       // bad
       function Queue(contents = []) { 
@@ -401,8 +446,10 @@ title: "Coding Convention"
       		return value; 
       	}
       }
-
+  {% endhighlight %}
+  
 - 상속은 extends를 사용하자
+  {% highlight js %}
 
       // bad
       const inherits = require('inherits');
@@ -422,8 +469,10 @@ title: "Coding Convention"
       		return this._queue[0]; 
       	}
       }
-
+  {% endhighlight %}
+  
 - 비표준 모듈 시스템이 아니라면 항상 import/export를 사용하자 이렇게 함으로써 원하는 모듈 시스템에 언제든지 트랜스파일 할 수 있다
+  {% highlight js %}
 
       // bad
       const AirbnbStyleGuide = require('./AirbnbStyleGuide');
@@ -436,16 +485,20 @@ title: "Coding Convention"
       // best
       import { es6 } from './AirbnbStyleGuide';
       export default es6;
-
+  {% endhighlight %}
+  
 - 와일드카드를 이용한 가져오기는 지양하자
+  {% highlight js %}
 
       // bad
       import * as AirbnbStyleGuide from './AirbnbStyleGuide';
       
       // good
       import AirbnbStyleGuide from './AirbnbStyleGuide';
-
+  {% endhighlight %}
+  
 - Const를 그룹화하고 그다음 let을 그룹화 하자
+  {% highlight js %}
 
       // bad
       let i, len, dragonball, 
@@ -465,8 +518,10 @@ title: "Coding Convention"
       let dragonball;
       let i;
       let length;
+  {% endhighlight %}
 
 - 손쉬운 방법을 사용하자
+  {% highlight js %}
 
       // bad
       if (name !== '') { 
@@ -487,8 +542,10 @@ title: "Coding Convention"
       if (collection.length) { 
       	// ...stuff...
       }
-
+  {% endhighlight %}
+  
 - 쉼표로 시작은 하지 말자
+  {% highlight js %}
 
       // bad
       const story = [ 
@@ -519,8 +576,10 @@ title: "Coding Convention"
       	birthYear: 1815, 
       	superPower: 'computers',
       };
-
+  {% endhighlight %}
+  
 - Number형으로 변환하려면 parseInt를 사용하자
+  {% highlight js %}
 
       const inputValue = '4';
       
@@ -541,8 +600,10 @@ title: "Coding Convention"
       
       // good
       const val = parseInt(inputValue, 10);
-
+  {% endhighlight %}
+  
 - Private 속성 이름은 앞에 _를 사용하자
+  {% highlight js %}
 
       // bad
       this.__firstName__ = 'Panda';
@@ -550,8 +611,10 @@ title: "Coding Convention"
       
       // good
       this._firstName = 'Panda';
-
+  {% endhighlight %}
+  
 - this에 대한 참조를 저장 하지 않기
+  {% highlight js %}
 
       // bad
       function foo() { 
@@ -575,3 +638,4 @@ title: "Coding Convention"
       		console.log(this); 
       	};
       }
+  {% endhighlight %}
