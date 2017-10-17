@@ -146,10 +146,10 @@ User
   .findOne({name: 'foo'})
   .populate('bar')
   .exec(function(err, user) {
-      if (err) {
-        return false;
-      }
-      return true;
+    if (err) {
+      return false;
+    }
+    return true;
   });
 
   User.findOne({name: 'foo'})
