@@ -2,7 +2,8 @@
 
 ## HEAD
 
-- Add ability to provide a comments provider for pages and posts
+- Support YAML list for keywords (Fix #7)
+- Add ability to provide a comments provider for pages and posts (#10)
 
 ## 1.3.0 (2017-02-20)
 
