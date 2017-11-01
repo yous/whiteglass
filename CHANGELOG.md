@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.4.0 (2017-11-01)
 
 - Support YAML list for keywords (Fix #7)
 - Add ability to provide a comments provider for pages and posts (#10)
