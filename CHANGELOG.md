@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.4.1 (2017-11-03)
 
 - Disable comments by default
 
