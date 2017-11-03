@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Disable comments by default
+
 ## 1.4.0 (2017-11-01)
 
 - Support YAML list for keywords (Fix #7)
