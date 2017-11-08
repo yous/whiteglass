@@ -154,4 +154,10 @@ Content-Type: image/png
 
 ---
 
-[TOC]
+- [REST Client (vs code)](#rest-client-vs-code)
+    - [사용](#%EC%82%AC%EC%9A%A9)
+    - [request 선택](#request-%EC%84%A0%ED%83%9D)
+    - [Request Line](#request-line)
+    - [Query Strings](#query-strings)
+    - [Request Headers](#request-headers)
+    - [Request Body](#request-body)
