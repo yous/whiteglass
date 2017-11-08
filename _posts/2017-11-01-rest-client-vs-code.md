@@ -5,7 +5,7 @@ title: "REST Client(vs code)"
 
 
 REST Client (vs code)
-================
+=====================
 
 **REST client**를 사용하면 HTTP 요청을 보내고 **vs code**에서 직접 응답을 볼 수 있습니다.
 
@@ -13,7 +13,7 @@ REST Client (vs code)
 
 
 사용
-------
+---
 
 **vs code** 상에서 아래와 같이 간단히 입력하시면 됩니다.
 ```
@@ -34,7 +34,7 @@ content-type: application/json
 ```
 
 request 선택
-------------------
+-----------
 
 같은 파일에 많은 요청을 저장하고 원하는대로 쉽게 실행할 수 있습니다. **REST Client**는 세 개 이상의 연속 된 **#**으로 시작하는 모든 행을 요청 간의 구분 기호로 인식 할 수 있습니다.
 
@@ -58,7 +58,7 @@ content-type: application/json
 
 
 Request Line
-------------------
+------------
 
 선택 영역의 첫 번째 비어 있지 않은 행 (또는 아무것도 선택되지 않은 경우 문서)이  **Request Line**입니다.
 
@@ -78,7 +78,7 @@ https://example.com/comments/1
 
 
 Query Strings
--------------------
+-------------
 
 ```
 GET https://example.com/comments?page=2&pageSize=10
@@ -92,7 +92,7 @@ GET https://example.com/comments
 
 
 Request Headers
-------------------------
+---------------
 
 첫 번째 줄에 대한 **Request Line** 바로 뒤의 줄은 **Request Headers**로 사용됩니다.
 
@@ -104,7 +104,7 @@ Content-Type: application/json
 
 
 Request Body
--------------------
+------------
 
 **Request Headers** 다음에 빈 줄을 추가하고 이후의 모든 내용은 **Request Body**로 처리됩니다.
 
