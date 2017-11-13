@@ -21,6 +21,11 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
 
+table {
+  width: 100%;
+  margin: 0 0 20px 0;
+  text-align: left; }
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
