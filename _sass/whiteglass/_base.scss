@@ -25,7 +25,11 @@ body {
   font-kerning: normal;
 }
 
-
+table {
+  width: 100%;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
