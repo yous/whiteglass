@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Add some styling for tables (#15)
+
 ## 1.4.1 (2017-11-03)
 
 - Disable comments by default
