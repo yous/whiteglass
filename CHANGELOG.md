@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.4.2 (2017-11-21)
 
 - Add some styling for tables (#15)
 
