@@ -199,6 +199,26 @@ categories:
   - Idea
 ```
 
+### Tag
+
+Each post can have `tags` attribute. It can be a string or an array. This will
+be displayed on index, archive and each post, and provide a link to the archive
+of tag.
+
+``` yaml
+layout: post
+title: Awesome Post
+tags: food
+```
+
+``` yaml
+layout: post
+title: Another Awesome Post
+tags:
+  - food
+  - trip
+```
+
 ### Feed
 
 Create `<your-site>/feed.xml` with:
