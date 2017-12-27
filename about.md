@@ -8,7 +8,7 @@ whiteglass is a minimal, responsive Jekyll theme for hackers.
 
 ## Installation
 
-Add this link to your Jekyll site's Gemfile:
+Add this line to your Jekyll site's Gemfile:
 
 ``` ruby
 gem "jekyll-whiteglass"
@@ -97,10 +97,21 @@ gem install jekyll-whiteglass
 To override the default structure and style of whiteglass, simply create the
 concerned directory at the root of your site, copy the file you wish to
 customize to that directory, and then edit the file. e.g., to override the
-[`_includes/head_custom.html`](_includes/head_custom.html) file to specify a
-custom style path, create an `_includes` directory, copy
-`_includes/head_custom.html` from jekyll-whiteglass gem folder to
+[`_includes/footer_content.html`](_includes/footer_content.html) file to add
+contents to footer, create an `_includes` directory, copy
+`_includes/footer_content.html` from jekyll-whiteglass gem folder to
 `<your-site>/_includes` and start editing that file.
+
+For example, you can add favicons to `_includes/head_custom.html`:
+
+``` html
+<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png" | relative_url }}">
+```
 
 The site's default CSS is in the gem itself,
 [`assets/main.scss`](assets/main.scss). To override the default CSS, the file
@@ -147,6 +158,23 @@ title: Awesome Post
 description: This is an awesome post.
 ```
 
+If you don't specify `post.description`, then `post.excerpt` will be used if it
+exist.
+
+### External URL
+
+`external-url` turns the title of your post to a link. Specify a URL which you
+want to link to.
+
+``` yaml
+layout: post
+title: Jekyll whiteglass theme
+external-url: https://github.com/yous/whiteglass
+```
+
+Then the title of your post would look like a link with text
+`Jekyll whiteglass theme →`. This also applies to your blog feed.
+
 ### Category
 
 Each post can have `categories` attribute. It can be a string or an array. This
@@ -166,6 +194,26 @@ categories:
   - Misc
   - Idea
 ```
+
+### Feed
+
+Create `<your-site>/feed.xml` with:
+
+``` yaml
+---
+layout: feed
+---
+```
+
+If you want to use another path for feed, you can specify a non-default path via
+your site's config.
+
+``` yaml
+feed:
+  path: atom.xml
+```
+
+Then create `<your-site>/atom.xml` with the same content of `feed.xml` above.
 
 ### Comments
 
