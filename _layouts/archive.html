@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="home">
 
   <h1 class="page-heading">Blog Archive</h1>
@@ -16,7 +15,11 @@ layout: default
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
 
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories != empty %} • {% include category_links.html categories=post.categories %}{% endif %}</span>
+        <span class="post-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+          {% if post.categories != empty or post.tags != empty %}
+            {% include category_links.html categories=post.categories tags=post.tags %}
+          {% endif %}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}"{% if lang != empty %} lang="{{ lang }}"{% endif %}>{{ post.title | escape }}{% if post.external-url %} &rarr;{% endif %}</a>

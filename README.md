@@ -65,9 +65,11 @@ gem install jekyll-whiteglass
    jekyll-archives:
      enabled:
        - categories
+       - tags
      layout: category_archives
      permalinks:
        category: /categories/:name/
+       tag: /tags/:name/
    ```
 
 4. Copy
