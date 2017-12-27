@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.5.0 (2017-12-27)
 
 - Support tags (#17)
 
