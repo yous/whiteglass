@@ -40,7 +40,7 @@ google_analytics:
 comments: false
 
 # Plugins
-gems:
+plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
