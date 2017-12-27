@@ -5,7 +5,7 @@
   
   <link href="https://yous.github.io/whiteglass/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://yous.github.io/whiteglass/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2017-12-27T13:18:07+00:00</updated>
+  <updated>2017-12-27T13:48:04+00:00</updated>
   <id>https://yous.github.io/whiteglass//</id>
 
   
@@ -229,6 +229,10 @@
         <category term="misc" />
       
 
+      
+        <category term="lorem" />
+      
+        <category term="ipsum" />
       
 
       

@@ -88,7 +88,7 @@
 
 <h2>Installation</h2>
 
-<p>Add this link to your Jekyll site’s Gemfile:</p>
+<p>Add this line to your Jekyll site’s Gemfile:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-whiteglass"</span>
 </code></pre></div></div>
@@ -140,9 +140,11 @@
 <span class="na">jekyll-archives</span><span class="pi">:</span>
   <span class="na">enabled</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">categories</span>
+    <span class="pi">-</span> <span class="s">tags</span>
   <span class="na">layout</span><span class="pi">:</span> <span class="s">category_archives</span>
   <span class="na">permalinks</span><span class="pi">:</span>
     <span class="na">category</span><span class="pi">:</span> <span class="s">/categories/:name/</span>
+    <span class="na">tag</span><span class="pi">:</span> <span class="s">/tags/:name/</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -176,10 +178,20 @@ bundle <span class="nb">exec </span>jekyll serve
 <p>To override the default structure and style of whiteglass, simply create the
 concerned directory at the root of your site, copy the file you wish to
 customize to that directory, and then edit the file. e.g., to override the
-<a href="_includes/head_custom.html"><code class="highlighter-rouge">_includes/head_custom.html</code></a> file to specify a
-custom style path, create an <code class="highlighter-rouge">_includes</code> directory, copy
-<code class="highlighter-rouge">_includes/head_custom.html</code> from jekyll-whiteglass gem folder to
+<a href="_includes/footer_content.html"><code class="highlighter-rouge">_includes/footer_content.html</code></a> file to add
+contents to footer, create an <code class="highlighter-rouge">_includes</code> directory, copy
+<code class="highlighter-rouge">_includes/footer_content.html</code> from jekyll-whiteglass gem folder to
 <code class="highlighter-rouge">&lt;your-site&gt;/_includes</code> and start editing that file.</p>
+
+<p>For example, you can add favicons to <code class="highlighter-rouge">_includes/head_custom.html</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">href=</span><span class="s">"/whiteglass/favicon.ico"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"76x76"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon-76x76.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"120x120"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon-120x120.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"152x152"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon-152x152.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"180x180"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon-180x180.png"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
 <p>The site’s default CSS is in the gem itself,
 <a href="assets/main.scss"><code class="highlighter-rouge">assets/main.scss</code></a>. To override the default CSS, the file
@@ -235,6 +247,22 @@ for improving SEO. Also, you can set <code class="highlighter-rouge">description
 <span class="na">description</span><span class="pi">:</span> <span class="s">This is an awesome post.</span>
 </code></pre></div></div>
 
+<p>If you don’t specify <code class="highlighter-rouge">post.description</code>, then <code class="highlighter-rouge">post.excerpt</code> will be used if it
+exist.</p>
+
+<h3>External URL</h3>
+
+<p><code class="highlighter-rouge">external-url</code> turns the title of your post to a link. Specify a URL which you
+want to link to.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Jekyll whiteglass theme</span>
+<span class="na">external-url</span><span class="pi">:</span> <span class="s">https://github.com/yous/whiteglass</span>
+</code></pre></div></div>
+
+<p>Then the title of your post would look like a link with text
+<code class="highlighter-rouge">Jekyll whiteglass theme →</code>. This also applies to your blog feed.</p>
+
 <h3>Category</h3>
 
 <p>Each post can have <code class="highlighter-rouge">categories</code> attribute. It can be a string or an array. This
@@ -252,6 +280,42 @@ archive of category.</p>
   <span class="pi">-</span> <span class="s">Misc</span>
   <span class="pi">-</span> <span class="s">Idea</span>
 </code></pre></div></div>
+
+<h3>Tag</h3>
+
+<p>Each post can have <code class="highlighter-rouge">tags</code> attribute. It can be a string or an array. This will
+be displayed on index, archive and each post, and provide a link to the archive
+of tag.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Awesome Post</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">food</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Another Awesome Post</span>
+<span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">food</span>
+  <span class="pi">-</span> <span class="s">trip</span>
+</code></pre></div></div>
+
+<h3>Feed</h3>
+
+<p>Create <code class="highlighter-rouge">&lt;your-site&gt;/feed.xml</code> with:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">feed</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>If you want to use another path for feed, you can specify a non-default path via
+your site’s config.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">feed</span><span class="pi">:</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">atom.xml</span>
+</code></pre></div></div>
+
+<p>Then create <code class="highlighter-rouge">&lt;your-site&gt;/atom.xml</code> with the same content of <code class="highlighter-rouge">feed.xml</code> above.</p>
 
 <h3>Comments</h3>
 
