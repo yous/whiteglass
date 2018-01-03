@@ -105,7 +105,7 @@
 
 <p>Or install it yourself as:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-whiteglass
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll-whiteglass
 </code></pre></div></div>
 
 <h2>Quick Start</h2>
@@ -128,7 +128,7 @@
     <p>Edit <code class="highlighter-rouge">_config.yml</code> to use whiteglass theme and its plugins:</p>
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-whiteglass</span>
-<span class="na">gems</span><span class="pi">:</span>
+<span class="na">plugins</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">jekyll-archives</span>
   <span class="pi">-</span> <span class="s">jekyll-paginate</span>
   <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
@@ -156,7 +156,7 @@
 <a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="highlighter-rouge">_data/navigation.yml</code></a>
 from the theme:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm index.md
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm </span>index.md
 curl <span class="nt">-L</span> <span class="nt">-O</span> <span class="s2">"https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"</span>
 curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span class="nt">-o</span> _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
 </code></pre></div>    </div>
@@ -165,8 +165,8 @@ curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span clas
     <p>Install gems and you’re good to go! The blog will be available on
 <code class="highlighter-rouge">http://127.0.0.1:4000</code>.</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-bundle <span class="nb">exec </span>jekyll serve
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div>    </div>
   </li>
 </ol>
