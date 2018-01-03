@@ -51,7 +51,7 @@ gem install jekyll-whiteglass
 
    ``` yaml
    theme: jekyll-whiteglass
-   gems:
+   plugins:
      - jekyll-archives
      - jekyll-paginate
      - jekyll-sitemap
