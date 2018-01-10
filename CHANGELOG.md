@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Appropriately size h1s in the post body (#19)
+
 ## 1.5.0 (2017-12-27)
 
 - Support tags (#17)
