@@ -2,7 +2,7 @@
 # pages in order as they should show up.
 main:
   - title: "About"
-    url: /about/
+    url: http://shapl.com/about
   - title: "Archives"
     url: /archives/
   - title: "GitHub"
