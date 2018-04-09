@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.6.0 (2018-04-09)
 
 - Appropriately size h1s in the post body (#19)
 - Update code for Web Font Loader
