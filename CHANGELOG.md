@@ -4,6 +4,7 @@
 
 - Appropriately size h1s in the post body (#19)
 - Update code for Web Font Loader
+- Link external URL directly for each post (#20)
 
 ## 1.5.0 (2017-12-27)
 
