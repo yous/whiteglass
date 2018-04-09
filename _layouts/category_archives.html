@@ -24,11 +24,10 @@ layout: default
         </span>
 
         <h2>
-          {% capture link_lang %}{% if lang != empty %} lang="{{ lang }}"{% endif %}{% endcapture %}
           {% if post.external-url %}
-            <a class="post-link" href="{{ post.external-url }}"{{ link_lang }}>{{ post.title | escape }} &rarr;</a>
+            <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
           {% else %}
-            <a class="post-link" href="{{ post.url | relative_url }}"{{ link_lang }}>{{ post.title | escape }}</a>
+            <a class="post-link" href="{{ post.url | relative_url }}"{% if lang != empty %} lang="{{ lang }}"{% endif %}>{{ post.title | escape }}</a>
           {% endif %}
         </h2>
       </li>

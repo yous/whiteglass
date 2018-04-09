@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Fix lang attribute for post with external URL
+
 ## 1.6.0 (2018-04-09)
 
 - Appropriately size h1s in the post body (#19)
