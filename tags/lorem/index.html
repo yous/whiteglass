@@ -33,15 +33,12 @@
   WebFontConfig = {
     google: { families: [ 'Bitter:400,700,400italic:latin' ] }
   };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
     s.parentNode.insertBefore(wf, s);
-  })();
+  })(document);
 </script>
 
   
@@ -139,10 +136,15 @@
   
 
 
-          </span>
+          
+          
+        </span>
 
         <h2>
-          <a class="post-link" href="/whiteglass/2017/01/03/super-long-article/">Some articles are just so long they deserve a really long title to see if things will break well</a>
+          
+          
+            <a class="post-link" href="/whiteglass/2017/01/03/super-long-article/">Some articles are just so long they deserve a really long title to see if things will break well</a>
+          
         </h2>
       </li>
     

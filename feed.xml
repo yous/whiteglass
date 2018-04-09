@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <generator uri="http://jekyllrb.com" version="3.7.0">Jekyll</generator>
+  <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
   
   
   <link href="https://yous.github.io/whiteglass/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://yous.github.io/whiteglass/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2018-01-10T11:39:30+00:00</updated>
+  <updated>2018-04-09T08:30:02+00:00</updated>
   <id>https://yous.github.io/whiteglass//</id>
 
   
@@ -30,7 +30,9 @@
       
       <title type="html">Welcome To Jekyll</title>
       
+      
       <link href="https://yous.github.io/whiteglass/2017/01/05/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome To Jekyll" />
+      
       <published>2017-01-05T00:00:00+00:00</published>
       <updated>2017-01-05T00:00:00+00:00</updated>
       <id>https://yous.github.io/whiteglass/2017/01/05/welcome-to-jekyll</id>
@@ -80,7 +82,9 @@
       
       <title type="html">This post demonstrates post content styles</title>
       
+      
       <link href="https://yous.github.io/whiteglass/2017/01/04/this-post-demonstrates-post-content-styles/" rel="alternate" type="text/html" title="This post demonstrates post content styles" />
+      
       <published>2017-01-04T00:00:00+00:00</published>
       <updated>2017-01-04T00:00:00+00:00</updated>
       <id>https://yous.github.io/whiteglass/2017/01/04/this-post-demonstrates-post-content-styles</id>
@@ -201,7 +205,9 @@
       
       <title type="html">Some articles are just so long they deserve a really long title to see if things will break well</title>
       
+      
       <link href="https://yous.github.io/whiteglass/2017/01/03/super-long-article/" rel="alternate" type="text/html" title="Some articles are just so long they deserve a really long title to see if things will break well" />
+      
       <published>2017-01-03T00:00:00+00:00</published>
       <updated>2017-01-03T00:00:00+00:00</updated>
       <id>https://yous.github.io/whiteglass/2017/01/03/super-long-article</id>
@@ -249,7 +255,9 @@
       
       <title type="html">My Example Post</title>
       
+      
       <link href="https://yous.github.io/whiteglass/2017/01/02/my-example-post/" rel="alternate" type="text/html" title="My Example Post" />
+      
       <published>2017-01-02T00:00:00+00:00</published>
       <updated>2017-01-02T00:00:00+00:00</updated>
       <id>https://yous.github.io/whiteglass/2017/01/02/my-example-post</id>
