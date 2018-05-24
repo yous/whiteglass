@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Use Google Fonts CSS directly with preconnect
+
 ## 1.6.1 (2018-04-09)
 
 - Fix lang attribute for post with external URL
