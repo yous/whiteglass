@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
+  <generator uri="http://jekyllrb.com" version="3.8.2">Jekyll</generator>
   
   
   <link href="https://yous.github.io/whiteglass/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://yous.github.io/whiteglass/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2018-04-09T09:17:42+00:00</updated>
+  <updated>2018-05-24T06:22:01+00:00</updated>
   <id>https://yous.github.io/whiteglass//</id>
 
   
