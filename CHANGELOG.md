@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.7.0 (2018-05-24)
 
 - Use Google Fonts CSS directly with preconnect
 
