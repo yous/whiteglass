@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-whiteglass.svg)](https://badge.fury.io/rb/jekyll-whiteglass)
 [![Build Status](https://travis-ci.org/yous/whiteglass.svg?branch=master)](https://travis-ci.org/yous/whiteglass)
-[![Dependency Status](https://gemnasium.com/badges/github.com/yous/whiteglass.svg)](https://gemnasium.com/github.com/yous/whiteglass)
 
 Minimal, responsive Jekyll theme for hackers.
 
