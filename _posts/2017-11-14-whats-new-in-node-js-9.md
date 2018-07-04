@@ -4,6 +4,8 @@ title: "Node.js 9에 새로운 점"
 date:   2017-11-14 11:00:00 +0900
 ---
 
+Node.js 9에 새로운 점
+====================
 
 HTTP/2
 ------
@@ -31,7 +33,6 @@ server.on('stream', (stream, headers) => {
 server.listen(8443)
 ```
 
-
 Deep Strict Equal
 -----------------
 
@@ -46,7 +47,6 @@ const isEq = isDeepStrictEqual({
   a: 1
 })
 ```
-
 
 util 모듈에 Callbackfy가 추가
 ---------------------------
@@ -66,10 +66,8 @@ callbackify(main)(function (err) {
 })
 ```
 
-
 더 많은 static error codes
 -------------------------
-
 
 오류가 발생했을 때 문자열 비교 문제를 해결하기 위해 Node.js 코어에 정적 오류 코드가 표시되기 시작했습니다.
 
@@ -81,13 +79,11 @@ if (err.message === 'Can\'t set headers after they are sent.') {
 
 이 문제점은 심지어 오타 수정으로 인해 크게 변경 될 수 있다는 것입니다.
 
-
 ```js
 if (err.code === 'ERR_HTTP_HEADERS_SENT') {
   //do something with the error
 }
 ```
-
 
 [에러코드 링크](https://nodejs.org/api/errors.html#errors_node_js_error_codes)
 
