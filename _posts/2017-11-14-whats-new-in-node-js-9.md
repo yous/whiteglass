@@ -86,11 +86,3 @@ if (err.code === 'ERR_HTTP_HEADERS_SENT') {
 ```
 
 [에러코드 링크](https://nodejs.org/api/errors.html#errors_node_js_error_codes)
-
----
-
-- [Node.js 9에 새로운 점](#nodejs-9%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%A0%90)
-  - [HTTP/2](#http2)
-  - [Deep Strict Equal](#deep-strict-equal)
-  - [util 모듈에 Callbackfy가 추가](#util-%EB%AA%A8%EB%93%88%EC%97%90-callbackfy%EA%B0%80-%EC%B6%94%EA%B0%80)
-  - [더 많은 static error codes](#%EB%8D%94-%EB%A7%8E%EC%9D%80-static-error-codes)
