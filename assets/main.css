@@ -19,7 +19,8 @@ body {
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
-  font-kerning: normal; }
+  font-kerning: normal;
+  word-wrap: break-word; }
 
 table {
   width: 100%;
@@ -119,7 +120,8 @@ code {
 
 pre {
   padding: 8px 12px;
-  overflow-x: auto; }
+  overflow-x: auto;
+  word-wrap: normal; }
   pre > code {
     border: 0;
     padding-right: 0;
