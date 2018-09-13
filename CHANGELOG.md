@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.7.1 (2018-09-13)
 
 - Set proper word-wrap for long lines
 
