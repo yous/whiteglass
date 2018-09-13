@@ -23,6 +23,7 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  word-wrap: break-word;
 }
 
 table {
@@ -163,6 +164,7 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  word-wrap: normal;
 
   > code {
     border: 0;
