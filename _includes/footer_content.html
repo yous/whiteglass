@@ -2,4 +2,18 @@
 {% if site.feed and site.feed.path %}
   {% assign feed_path = site.feed.path %}
 {% endif %}
-&copy; {{ site.author }} - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="{{ feed_path | absolute_url }}">RSS</a>
+
+{% if site.footer_links %}
+  <div class="social-icons">
+    {% for footer_link in site.footer_links %}
+      {% if footer_link.url contains "://" %}
+        {% assign url = footer_link.url %}
+      {% else %}
+        {% assign url = footer_link.url | relative_url %}
+      {% endif %}
+      <a class="social-icon" href="{{ url }}"><i class="{{ footer_link.icon | default: 'fas fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+&copy; {{ site.time | date: '%Y' }} {{ site.author }} - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="{{ feed_path | absolute_url }}">RSS</a>
