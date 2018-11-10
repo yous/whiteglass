@@ -159,6 +159,24 @@ curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span clas
   </li>
 </ol>
 
+<h2>Deployment to GitHub Pages using Travis CI</h2>
+
+<p>This theme uses <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a> gem
+which is <a href="https://help.github.com/articles/configuring-jekyll-plugins/">not supported by GitHub Pages</a>.
+If you want to use full features like categories and tags, I recommend you to
+use Travis CI or other CI services.</p>
+
+<p>To deploy using Travis CI, first copy the <a href=".travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> of this
+repository. You can change <code class="highlighter-rouge">target-branch</code> (<code class="highlighter-rouge">gh-pages</code> by default) and
+<code class="highlighter-rouge">on.branch</code> (<code class="highlighter-rouge">master</code> by default) as you want. If you want further
+customization, see <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis CI’s documentation page</a>.</p>
+
+<p>You’ll see there’s <code class="highlighter-rouge">github-token: $GITHUB_TOKEN</code>, and this is what you should
+configure. Go to your <a href="https://github.com/settings/tokens">personal access tokens</a>
+page, and generate new token with <code class="highlighter-rouge">public_repo</code> or <code class="highlighter-rouge">repo</code> permission as you
+need. Then go to Travis CI’s settings page of your repository, and add a new
+environment variable <code class="highlighter-rouge">GITHUB_TOKEN</code> with the value of the token you generated.</p>
+
 <h2>Usage</h2>
 
 <h3>Customization</h3>
