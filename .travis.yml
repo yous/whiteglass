@@ -3,24 +3,21 @@ sudo: false
 cache: bundler
 rvm:
   - 2.5.3
-env:
-  global:
-    - secure: "IiTm3gexj2wKAf1TAWBIrece2tBAjw/1pED+2fZ1XB6N71zzu/9RGt5JHLJ5CoQY+frMUURblcmfqyGSz/6QFGfT/ZEj2Xuy/T6OkXqV8HlD96zVEaeCz3JJzIRUMEZZrN3tOw6gJF1YQExjWjltGy8RQKln3YoRMnNTSqi/ydRf8wY/dNWXnLxC08kBeoRqtnN1VWq4JgDS/JwGKJgA7mcKStkJR7B8lHI4yk3YAvK5eQBGYp+YjEJ9DG52JsrD5d5WWinOz9/FBFDdjVHfapLdfDTLSHvg/TBwL6r4+9o7F1B/1y+V8/3GX2uOvI4mySV2d0wN2ZHUFa2+wbZy9X3b4/Dv3r7ESKNEZTrNDEjL6ssE/yDlQLeGDAocjQKKjWz+idJqTNM3dJL1RpOEdd/xIIc6ICCm0RonHgFcJdleNE2zY86JjODZ0lhVBpB72PFV0rIgLLfyEo9VMMJNk910t2tbWSHze3uR0gutZQX14R+yLduvUd9fcNQjUfvj6DzM+3R8NpkeE0Kq2ry92+Q+mp7/9CtP/hjoPhOLPcVeTLCAzfIekW1IXBSujo/xMHl6OnF/XZFKDlNNYpEI8rStiQxJwKWe0AgoPsFnq3oqjiAzAFpfdA1RhZKG3Aznj9LR6iDoIkJy3myEX7IqY+wb2Qxt6aOJoOwkqiJjfMA="
 before_install:
   - gem update --system
   - gem install bundler
-before_script:
-  - git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
-  - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
 script:
-  - git clone -b gh-pages --depth 1 "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" _site >/dev/null 2>&1
-  - rm -rf _site/*
+  - find _site -mindepth 1 -delete || true
   - bundle exec jekyll build
-after_success:
-  - cd _site
-  - git add -A
-  - git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
-  - git push "https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages >/dev/null 2>&1
 branches:
   only:
     - master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: _site
+  target-branch: gh-pages
+  on:
+    branch: master
