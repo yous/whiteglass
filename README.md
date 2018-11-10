@@ -93,6 +93,24 @@ gem install jekyll-whiteglass
    bundle exec jekyll serve
    ```
 
+## Deployment to GitHub Pages using Travis CI
+
+This theme uses [jekyll-archives](https://github.com/jekyll/jekyll-archives) gem
+which is [not supported by GitHub Pages](https://help.github.com/articles/configuring-jekyll-plugins/).
+If you want to use full features like categories and tags, I recommend you to
+use Travis CI or other CI services.
+
+To deploy using Travis CI, first copy the [`.travis.yml`](.travis.yml) of this
+repository. You can change `target-branch` (`gh-pages` by default) and
+`on.branch` (`master` by default) as you want. If you want further
+customization, see [Travis CI's documentation page](https://docs.travis-ci.com/user/deployment/pages/).
+
+You'll see there's `github-token: $GITHUB_TOKEN`, and this is what you should
+configure. Go to your [personal access tokens](https://github.com/settings/tokens)
+page, and generate new token with `public_repo` or `repo` permission as you
+need. Then go to Travis CI's settings page of your repository, and add a new
+environment variable `GITHUB_TOKEN` with the value of the token you generated.
+
 ## Usage
 
 ### Customization
