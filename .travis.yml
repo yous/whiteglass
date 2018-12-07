@@ -7,7 +7,7 @@ before_install:
   - gem update --system
   - gem install bundler
 script:
-  - find _site -mindepth 1 -delete || true
+  - rm -rf _site
   - bundle exec jekyll build
 branches:
   only:
