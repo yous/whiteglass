@@ -35,3 +35,9 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 빠르게 파일을 생성할수 있게 도와줍니다.
 
 - [Github 페이지](https://github.com/skuroda/Sublime-AdvancedNewFile)
+
+### IMESupport for Sublime Text
+
+한글입력시 그나마 입력하는 모습이 보이도록 해줍니다.
+
+- [Github 페이지](https://github.com/chikatoike/IMESupport)
