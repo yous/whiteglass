@@ -63,5 +63,3 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 FTP나 FTPS, SFTP에 연결하여 작업을 할수 있게 해줍니다.
 
 - [Package Control 페이지](https://packagecontrol.io/packages/SFTP)
-
----
