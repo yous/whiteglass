@@ -2,9 +2,9 @@
 layout: post
 title: "Sublime Text"
 date: 2019-01-25 13:53:19 +0900
+marp: true
+page_number: true
 ---
-
-<!-- page_number: true -->
 
 # Sublime Text 소개
 
