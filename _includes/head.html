@@ -27,18 +27,16 @@
 
   {% include head_custom.html %}
 
-  {% if site.facebook_app_id %}
-    <meta property="fb:admins" content="{{ site.facebook_app_id }}">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:site_name" content="{{ site.title | escape }}">
-    <meta property="og:url" content="{{ canonical }}">
-    <meta property="og:description" content="{{ description }}">
-    {% if site.facebook_page %}<meta property="article:author" content="{{ site.facebook_page }}">{% endif %}
-    {% if page.facebook.image %}
-      <meta property="og:image" content="{{ page.facebook.image }}">
-    {% elsif site.facebook_image %}
-      <meta property="og:image" content="{{ site.facebook_image }}">
-    {% endif %}
+  {% if site.facebook_app_id %}<meta property="fb:admins" content="{{ site.facebook_app_id }}">{% endif %}
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if site.facebook_page %}<meta property="article:author" content="{{ site.facebook_page }}">{% endif %}
+  {% if page.facebook.image %}
+    <meta property="og:image" content="{{ page.facebook.image }}">
+  {% elsif site.facebook_image %}
+    <meta property="og:image" content="{{ site.facebook_image }}">
   {% endif %}
   <meta name="twitter:card" content="{{ page.twitter_card.type | default: "summary" }}">
   {% if site.twitter_username %}<meta name="twitter:site" content="{{ site.twitter_username }}">{% endif %}
