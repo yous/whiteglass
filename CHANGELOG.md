@@ -1,5 +1,11 @@
 # ChangeLog
 
+## 1.8.0 (2019-05-07)
+
+- Loosen version requirements for bundler
+- Include basic meta tags even without facebook_app_id
+- Update syntax highlighting CSS to rouge's GitHub style
+
 ## 1.7.1 (2018-09-13)
 
 - Set proper word-wrap for long lines
