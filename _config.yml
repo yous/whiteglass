@@ -16,7 +16,7 @@
 title: whiteglass theme
 author: Yous
 description: Minimal, responsive Jekyll theme for hackers.
-baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://yous.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 timezone: UTC
@@ -72,3 +72,14 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+
+footer_links:
+  - title: Twitter
+    url: https://twitter.com/username
+    icon: fab fa-twitter-square
+  - title: YouTube
+    url: https://www.youtube.com/channelURL
+    icon: fab fa-youtube-square
+  - title: Feed
+    url: feed.xml
+    icon: fas fa-rss-square
