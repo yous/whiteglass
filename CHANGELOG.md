@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- DNS prefetch for Google Fonts
+
 ## 1.8.0 (2019-05-07)
 
 - Loosen version requirements for bundler
