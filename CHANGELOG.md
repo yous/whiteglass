@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.8.2 (2019-05-25)
 
 - Use font-display: swap for Google Fonts
 
