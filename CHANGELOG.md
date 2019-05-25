@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Use font-display: swap for Google Fonts
+
 ## 1.8.1 (2019-05-15)
 
 - DNS prefetch for Google Fonts
