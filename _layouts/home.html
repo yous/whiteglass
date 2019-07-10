@@ -32,6 +32,9 @@ layout: default
               • <a href="{{ post.url | relative_url }}">Permalink</a>
             {% endif %}
           </p>
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.imagealt }}">
+          {% endif %}
         </header>
 
         <div class="post-content">
