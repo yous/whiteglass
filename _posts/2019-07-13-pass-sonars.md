@@ -1,9 +1,10 @@
 # Pass Sonars
 ### A basic Python package to create pass sonars in Python
 
-A while back I wrote a [post](https://totalfootballanalysis.com/data-analysis/data-analysis-france-south-korea-tactical-analysis-statistics) for [Total Football Analysis](https://totalfootballanalysis.com) about creating pass sonars in Python. Encouraged by how well that piece did, I decided to write a simple Python package which will allow people to create [pass sonars](https://twitter.com/etmckinley/status/1046389278153068545?lang=en) with greater ease. 
+A while back I wrote a [post](https://totalfootballanalysis.com/data-analysis/data-analysis-france-south-korea-tactical-analysis-statistics) for [Total Football Analysis](https://totalfootballanalysis.com) about creating pass sonars in Python. Encouraged by how well that piece did, I decided to write a simple Python package called [PassSonars](https://github.com/AbhishekSharma99/PassSonars) which will allow people to create [pass sonars](https://twitter.com/etmckinley/status/1046389278153068545?lang=en) with greater ease. 
 
-! [Pass Sonar - Norway] (https://github.com/AbhishekSharma99/Statsbomb-Data/blob/master/gggg.PNG)
+<img src="https://github.com/AbhishekSharma99/Statsbomb-Data/blob/master/gggg.PNG" width="800" />
+
 
 ## Dependencies
 
@@ -23,11 +24,11 @@ In order to get PassSonars up and running, here's what you have to do -
 
   Open `Sonars.py`
   
-      * Change `base_link` to the full path of the events directory of the Statsbomb data
-      
-      * Change `image_link` to the full path of the  `.png` image of the Statsbomb logo from the Statsbomb data
-      
-      * Change `positions_json` to the full path of `PositionsStatsbomb.json` which you'll find in the cloned `PassSonars` folder. 
+    * Change `base_link` to the full path of the events directory of the Statsbomb data
+
+    * Change `image_link` to the full path of the  `.png` image of the Statsbomb logo from the Statsbomb data
+
+    * Change `positions_json` to the full path of `PositionsStatsbomb.json` which you'll find in the cloned `PassSonars` folder. 
 
 ## Using PassSonars
 
