@@ -8,9 +8,10 @@ A while back I wrote a [post](https://totalfootballanalysis.com/data-analysis/da
 ## Dependencies
 
 You'll need to have Python 3.x installed along with the following libraries - 
--Matplotlib
--Pandas
--Numpy
+
+- Matplotlib
+- Pandas
+- Numpy
 
 ## Setting up PassSonars
 
@@ -55,6 +56,6 @@ inst = PlotSonars(mid, team_no, cmap)
 
 **All of the above is present in `Test.py`**
 
-## Caveats
+## Issues
 
-As this is my first package, a lot going under the hood is less than desirable. I've tried my best to ensure the code is PEP8 compliant. Another thing I'd wish to improve is increasing the overall functionality. If you wish to contribute in any way or have any other questions, feel free to open pull requests/issues. 
+As this is my first package, a lot going under the hood is less than desirable. I've tried my best to ensure the code is [PEP8](https://www.python.org/dev/peps/pep-0008) compliant. Another obvious thing to work upon is increasing the overall functionality available. If you wish to contribute in any way or have any other questions, feel free to open pull requests/issues. 
