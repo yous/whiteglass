@@ -49,10 +49,12 @@ inst = PlotSonars(mid, team_no, cmap)
 ```
 
   The three arguments are respectively-
-    1. The Statsbomb match_id of the match for which you want to create the pass-sonars
-    2. The team_no - either 0 or 1, depending on which of the two teams' sonar you want to see
-    3. cmap (optional) - the [colormap](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) for the sonars - default is viridis
-
+  
+  - The Statsbomb match_id of the match for which you want to create the pass-sonars
+  - The team_no - either 0 or 1, depending on which of the two teams' sonar you want to see
+  - cmap (optional) - the [colormap](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) for the sonars - default is viridis
+  
+  
 4. Finally, you pass the instance to the Main function of the `PlotSonars` class and call `plt.show()`. Hopefully, you'll see your result being displayed. 
 
 **All of the above is present in `Test.py`**
