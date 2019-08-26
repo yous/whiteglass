@@ -1,5 +1,11 @@
 # ChangeLog
 
+## HEAD
+
+- Adjust $grey-color to conform to WCAG 2.0 AA (#26)
+- Support Jekyll 4.0
+- Fix insufficient contrast in syntax highlighting (#26)
+
 ## 1.8.2 (2019-05-25)
 
 - Use font-display: swap for Google Fonts
