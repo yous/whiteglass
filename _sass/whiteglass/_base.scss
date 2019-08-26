@@ -129,6 +129,10 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+
+  pre, code {
+    color: $text-color;
+  }
 }
 
 
