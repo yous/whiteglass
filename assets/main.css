@@ -39,6 +39,8 @@ blockquote { color: #757575; border-left: 4px solid #e8e8e8; padding-left: 15px;
 
 blockquote > :last-child { margin-bottom: 0; }
 
+blockquote pre, blockquote code { color: #111; }
+
 /** Rules */
 hr { height: 4px; margin: 15px 0; border: 0; background-color: #e8e8e8; }
 
