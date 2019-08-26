@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.9.0 (2019-08-26)
 
 - Adjust $grey-color to conform to WCAG 2.0 AA (#26)
 - Support Jekyll 4.0
