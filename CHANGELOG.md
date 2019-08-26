@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.9.1 (2019-08-26)
 
 - Restore colors of code in blockquotes
 - Fix insufficient contrast of .post-continue
