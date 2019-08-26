@@ -3,6 +3,7 @@
 ## HEAD
 
 - Restore colors of code in blockquotes
+- Fix insufficient contrast of .post-continue
 
 ## 1.9.0 (2019-08-26)
 
