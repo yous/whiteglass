@@ -99,8 +99,8 @@ which is [not supported by GitHub Pages](https://help.github.com/articles/config
 If you want to use full features like categories and tags, I recommend you to
 use Travis CI or other CI services.
 
-To deploy using Travis CI, first copy the [`.travis.yml`](.travis.yml) of this
-repository. You can change `target-branch` (`gh-pages` by default) and
+To deploy using Travis CI, first copy the [`.travis.yml`](https://github.com/yous/whiteglass/blob/master/.travis.yml)
+of this repository. You can change `target-branch` (`gh-pages` by default) and
 `on.branch` (`master` by default) as you want. If you want further
 customization, see [Travis CI's documentation page](https://docs.travis-ci.com/user/deployment/pages/).
 
