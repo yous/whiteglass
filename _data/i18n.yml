@@ -13,6 +13,7 @@ en:
   archive: "Blog Archive"
   archive-category: "Archive of category '%1'"
   archive-tag: "Archiv of tag '%1'"
+  comments: "Comments"
 de:
   date:
     abbr_day_names: ["So", "Mo", "Di", "Mi", "Do", "Fr" , "Sa"]
@@ -28,6 +29,7 @@ de:
   archive: "Blog Archiv"
   archive-category: "Archiv der Kategorie '%1'"
   archive-tag: "Archiv des Tags '%1'"
+  comments: "Kommentare"
 de-AT:
   date:
     month_names: ["Jänner", "Feber", "März", "April", "Mai", "Juni",
