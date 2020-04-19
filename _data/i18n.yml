@@ -1,19 +1,30 @@
-months:
-  de: ["Januar", "Februar", "März", "April", "Mai", "Juni",
-       "Juli", "August", "September", "Oktober", "November", "Dezember"]
-  de-AT: ["Jänner", "Feber", "März", "April", "Mai", "Juni",
-       "Juli", "August", "September", "Oktober", "November", "Dezember"]
-
-# See http://ruby-doc.org/core/Time.html#method-i-strftime for possible date formatting
-dateformat:
-  en: "%b %-d, %Y"
-  de: "%e. %B %Y"
-morelink:
-  en: "Read on"
-  de: "Weiterlesen"
-page-older:
-  en: "Older"
-  de: "Ältere Beiträge"
-page-newer:
-  en: "Newer"
-  de: "Neuere Beiträge"
+en:
+  date:
+    format: "%b %-d, %Y" # See http://ruby-doc.org/core/Time.html#method-i-strftime for possible date formatting strings
+    abbr_day_names: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    abbr_month_names: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dez"]
+    day_names: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    month_names: ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"]
+  morelink: "Read on"
+  page-older: "Older"
+  page-newer: "Newer"
+de:
+  date:
+    abbr_day_names: ["So", "Mo", "Di", "Mi", "Do", "Fr" , "Sa"]
+    abbr_month_names: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", 
+      "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
+    day_names: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+    month_names: ["Januar", "Februar", "März", "April", "Mai", "Juni",
+      "Juli", "August", "September", "Oktober", "November", "Dezember"]
+    format: "%e. %B %Y"
+  morelink: "Weiterlesen"
+  page-older: "Ältere Beiträge"
+  page-newer: "Neuere Beiträge"
+de-AT:
+  date:
+    month_names: ["Jänner", "Feber", "März", "April", "Mai", "Juni",
+      "Juli", "August", "September", "Oktober", "November", "Dezember"]
+    abbr_month_names: ["Jän", "Feb", "Mär", "Apr", "Mai", "Jun", 
+      "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]

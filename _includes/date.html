@@ -5,23 +5,38 @@
 {% endif %}
 {% assign splang = plang | truncate: 2, "" %}
 {% if plang != "en" %}
-  {% assign dateformat = site.data.i18n.dateformat[plang] %}
+  {% assign dateformat = site.data.i18n.[plang].date.format %}
   {% unless dateformat %}
-    {% assign dateformat = site.data.i18n.dateformat[splang] %}
+    {% assign dateformat = site.data.i18n.[splang].date.format %}
   {% endunless %}
   {% unless dateformat %}
-    {% assign dateformat = site.data.i18n.dateformat["en"] %}
+    {% assign dateformat = site.data.i18n.en.date.format %}
   {% endunless %}
-  {% assign date = include.date | date: dateformat %}
-  {% assign eng_month = include.date | date: "%B" %}
-  {% assign num_month = include.date | date: "%m" | minus: 1 %}
-  {% if site.data.i18n.months[plang][num_month] %}
-    {{ date | replace:eng_month, site.data.i18n.months[plang][num_month] }}
-  {% elsif site.data.i18n.months[splang][num_month] %}
-    {{ date | replace:eng_month, site.data.i18n.months[splang][num_month] }}
-  {% else %}
-    {{ include.date | date: "%b %-d, %Y" }}
+  {% comment %} The dateformat is determined based on the language. Now replace required variables (for now we ignore time based variables (%p, %P)) {% endcomment %}
+  {% assign num_month = include.date | date: "%-m" | minus: 1 %}
+  {% assign num_day = include.date | date: "%w" | plus: 0%}
+  {% assign i18n_dateformat = dateformat %} 
+  {% if site.data.i18n.[plang].date.abbr_day_names[num_day] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%a", site.data.i18n.[plang].date.abbr_day_names[num_day] %}
+  {% elsif site.data.i18n.[splang].date.abbr_day_names[num_day] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%a", site.data.i18n.[splang].date.abbr_day_names[num_day] %}
   {% endif %}
+  {% if site.data.i18n.[plang].date.day_names[num_day] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%A", site.data.i18n.[plang].date.day_names[num_day] %}
+  {% elsif site.data.i18n.[splang].date.day_names[num_day] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%A", site.data.i18n.[splang].date.day_names[num_day] %}
+  {% endif %}
+  {% if site.data.i18n.[plang].date.abbr_month_names[num_month] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%b", site.data.i18n.[plang].date.abbr_month_names[num_month] %}
+  {% elsif site.data.i18n.[splang].date.abbr_month_names[num_month] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%b", site.data.i18n.[splang].date.abbr_month_names[num_month] %}
+  {% endif %}
+  {% if site.data.i18n.[plang].date.month_names[num_month] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%B", site.data.i18n.[plang].date.month_names[num_month] %}
+  {% elsif site.data.i18n.[splang].date.month_names[num_month] %}
+    {% assign i18n_dateformat = i18n_dateformat | replace:"%B", site.data.i18n.[splang].date.month_names[num_month] %}
+  {% endif %}
+  {{ include.date | date: i18n_dateformat }}
 {% else %}
-  {{ include.date | date: "%b %-d, %Y" }}
+  {{ include.date | date: site.data.i18n.en.date.format }}
 {% endif %}
