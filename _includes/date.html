@@ -10,7 +10,7 @@
     {% assign dateformat = site.data.i18n.[splang].date.format %}
   {% endunless %}
   {% unless dateformat %}
-    {% assign dateformat = site.data.i18n.en.date.format %}
+    {% assign dateformat = "%b %-d, %Y" %}
   {% endunless %}
   {% comment %} The dateformat is determined based on the language. Now replace required variables (for now we ignore time based variables (%p, %P)) {% endcomment %}
   {% assign num_month = include.date | date: "%-m" | minus: 1 %}
@@ -38,5 +38,5 @@
   {% endif %}
   {{ include.date | date: i18n_dateformat }}
 {% else %}
-  {{ include.date | date: site.data.i18n.en.date.format }}
+  {{ include.date | date: "%b %-d, %Y" }}
 {% endif %}
