@@ -10,6 +10,9 @@ en:
   morelink: "Read on"
   page-older: "Older"
   page-newer: "Newer"
+  archive: "Blog Archive"
+  archive-category: "Archive of category '%1'"
+  archive-tag: "Archiv of tag '%1'"
 de:
   date:
     abbr_day_names: ["So", "Mo", "Di", "Mi", "Do", "Fr" , "Sa"]
@@ -22,6 +25,9 @@ de:
   morelink: "Weiterlesen"
   page-older: "Ältere Beiträge"
   page-newer: "Neuere Beiträge"
+  archive: "Blog Archiv"
+  archive-category: "Archiv der Kategorie '%1'"
+  archive-tag: "Archiv des Tags '%1'"
 de-AT:
   date:
     month_names: ["Jänner", "Feber", "März", "April", "Mai", "Juni",

@@ -4,12 +4,13 @@
   {% else %}
     {% assign plang = page.lang | default: site.lang | default: "en" %}
   {% endif %}
+  {% comment %}Whitespace is somehow introduced in category_archives.html therefor we have to strip it.{% endcomment %}
+  {%- assign i18n-tag = include.value | strip -%}
   {% assign splang = plang | truncate: 2, "" %}
-  {% assign val = site.data.i18n[include.value] %}
-  {% if val[plang] %}
-    {{ val[plang] }}
-  {% elsif val[splang] %}
-    {{ val[splang] }}
+  {% if site.data.i18n.[plang].[i18n-tag] %}
+    {{ site.data.i18n.[plang].[i18n-tag] }}
+  {% elsif site.data.i18n.[splang].[i18n-tag] %}
+    {{ site.data.i18n.[splang].[i18n-tag] }}
   {% else %}
     {{ include.default }}
   {% endif %}
