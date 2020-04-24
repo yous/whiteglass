@@ -35,6 +35,17 @@ gem install jekyll-whiteglass
 
 ## Quick Start
 
+1. Go to [yous/whiteglass-template](https://github.com/yous/whiteglass-template).
+2. Click "Use this template" button, and then create a repository.
+3. Generate a personal access token on <https://github.com/settings/tokens>,
+   select `public_repo` or `repo` depending on your repository.
+4. In the settings page of your repository, go to Secrets tab
+   (`https://github.com/<user>/<repo>/settings/secrets`) and add a secret
+   `JEKYLL_PAT` with the value of token you got from 3.
+5. Push some content, then GitHub Actions will generate the site.
+
+## Manual Setup
+
 1. Generate a new Jekyll blog:
 
    ``` sh
