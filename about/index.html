@@ -106,6 +106,19 @@
 <h2>Quick Start</h2>
 
 <ol>
+  <li>Go to <a href="https://github.com/yous/whiteglass-template">yous/whiteglass-template</a>.</li>
+  <li>Click “Use this template” button, and then create a repository.</li>
+  <li>Generate a personal access token on <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>,
+select <code class="highlighter-rouge">public_repo</code> or <code class="highlighter-rouge">repo</code> depending on your repository.</li>
+  <li>In the settings page of your repository, go to Secrets tab
+(<code class="highlighter-rouge">https://github.com/&lt;user&gt;/&lt;repo&gt;/settings/secrets</code>) and add a secret
+<code class="highlighter-rouge">JEKYLL_PAT</code> with the value of token you got from 3.</li>
+  <li>Push some content, then GitHub Actions will generate the site.</li>
+</ol>
+
+<h2>Manual Setup</h2>
+
+<ol>
   <li>
     <p>Generate a new Jekyll blog:</p>
 
@@ -147,12 +160,13 @@
 <a href="https://github.com/yous/whiteglass/blob/master/index.html"><code class="highlighter-rouge">index.html</code></a>,
 <a href="https://github.com/yous/whiteglass/blob/master/about.md"><code class="highlighter-rouge">about.md</code></a>,
 <a href="https://github.com/yous/whiteglass/blob/master/archives.md"><code class="highlighter-rouge">archives.md</code></a>,
-<a href="https://github.com/yous/whiteglass/blob/master/feed.xml"><code class="highlighter-rouge">feed.xml</code></a>, and
-<a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="highlighter-rouge">_data/navigation.yml</code></a>
+<a href="https://github.com/yous/whiteglass/blob/master/feed.xml"><code class="highlighter-rouge">feed.xml</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/robots.txt"><code class="highlighter-rouge">robots.txt</code></a>,
+and <a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="highlighter-rouge">_data/navigation.yml</code></a>
 from the theme:</p>
 
     <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm </span>index.md
-curl <span class="nt">-L</span> <span class="nt">-O</span> <span class="s2">"https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"</span>
+curl <span class="nt">-L</span> <span class="nt">-O</span> <span class="s2">"https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml,robots.txt}"</span>
 curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span class="nt">-o</span> _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
 </code></pre></div>    </div>
   </li>
