@@ -5,13 +5,7 @@
 {% endif %}
 {% assign splang = plang | truncate: 2, "" %}
 {% if plang != "en" %}
-  {% assign dateformat = site.data.i18n.[plang].date.format %}
-  {% unless dateformat %}
-    {% assign dateformat = site.data.i18n.[splang].date.format %}
-  {% endunless %}
-  {% unless dateformat %}
-    {% assign dateformat = "%b %-d, %Y" %}
-  {% endunless %}
+  {% assign dateformat = site.data.i18n.[plang].date.format | default: site.data.i18n.[splang].date.format | default: "%b %-d, %Y" %}
   {% comment %} The dateformat is determined based on the language. Now replace required variables (for now we ignore time based variables (%p, %P)) {% endcomment %}
   {% assign num_month = include.date | date: "%-m" | minus: 1 %}
   {% assign num_day = include.date | date: "%w" | plus: 0%}
