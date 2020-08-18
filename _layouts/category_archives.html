@@ -3,9 +3,7 @@ layout: default
 ---
 <div class="home">
 
-  {%- capture i18n-tag -%}
-    archive-{{ page.type }}
-  {% endcapture %}
+  {% capture i18n-tag %}archive-{{ page.type }}{% endcapture %}
   {%- capture default-title -%}
     Archive of {{ page.type }} '%1'
   {% endcapture %}
