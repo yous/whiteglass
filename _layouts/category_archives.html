@@ -10,7 +10,7 @@ layout: default
   {%- capture title -%}
     {% include i18n.html value=i18n-tag default=default-title %}
   {% endcapture %}
-  <h1 class="page-heading">{{ title | replace:"%1", page.title | escape }}</h1>
+  <h1 class="page-heading">{{ title | replace: "%1", page.title | escape }}</h1>
 
   {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
 
