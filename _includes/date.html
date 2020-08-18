@@ -8,7 +8,7 @@
   {% assign dateformat = site.data.i18n.[plang].date.format | default: site.data.i18n.[splang].date.format | default: "%b %-d, %Y" %}
   {% comment %} The dateformat is determined based on the language. Now replace required variables (for now we ignore time based variables (%p, %P)) {% endcomment %}
   {% assign num_month = include.date | date: "%-m" | minus: 1 %}
-  {% assign num_day = include.date | date: "%w" | plus: 0%}
+  {% assign num_day = include.date | date: "%w" | plus: 0 %}
   {% assign i18n_dateformat = dateformat %} 
   {% if site.data.i18n.[plang].date.abbr_day_names[num_day] %}
     {% assign i18n_dateformat = i18n_dateformat | replace:"%a", site.data.i18n.[plang].date.abbr_day_names[num_day] %}
