@@ -1,18 +1,18 @@
-{% capture text %}
-  {% if include.lang and include.lang != empty %}
-    {% assign plang = include.lang %}
-  {% else %}
-    {% assign plang = page.lang | default: site.lang | default: "en" %}
-  {% endif %}
-  {% comment %}Whitespace is somehow introduced in category_archives.html therefor we have to strip it.{% endcomment %}
+{%- capture text -%}
+  {%- if include.lang and include.lang != empty -%}
+    {%- assign plang = include.lang -%}
+  {%- else -%}
+    {%- assign plang = page.lang | default: site.lang | default: "en" -%}
+  {%- endif -%}
+  {%- comment -%}Whitespace is somehow introduced in category_archives.html therefor we have to strip it.{%- endcomment -%}
   {%- assign i18n-tag = include.value | strip -%}
-  {% assign splang = plang | truncate: 2, "" %}
-  {% if site.data.i18n.[plang].[i18n-tag] %}
+  {%- assign splang = plang | truncate: 2, "" -%}
+  {%- if site.data.i18n.[plang].[i18n-tag] -%}
     {{ site.data.i18n.[plang].[i18n-tag] }}
-  {% elsif site.data.i18n.[splang].[i18n-tag] %}
+  {%- elsif site.data.i18n.[splang].[i18n-tag] -%}
     {{ site.data.i18n.[splang].[i18n-tag] }}
-  {% else %}
+  {%- else -%}
     {{ include.default }}
-  {% endif %}
-{% endcapture %}
+  {%- endif -%}
+{%- endcapture -%}
 {{ text | strip_newlines }}
