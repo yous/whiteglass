@@ -12,7 +12,7 @@ en:
   page-newer: "Newer"
   archive: "Blog Archive"
   archive-category: "Archive of category '%1'"
-  archive-tag: "Archiv of tag '%1'"
+  archive-tag: "Archive of tag '%1'"
   comments: "Comments"
 de:
   date:
