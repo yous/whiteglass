@@ -4,8 +4,7 @@
   {%- else -%}
     {%- assign plang = page.lang | default: site.lang | default: "en" -%}
   {%- endif -%}
-  {%- comment -%}Whitespace is somehow introduced in category_archives.html therefor we have to strip it.{%- endcomment -%}
-  {%- assign i18n-tag = include.value | strip -%}
+  {%- assign i18n-tag = include.value -%}
   {%- assign splang = plang | truncate: 2, "" -%}
   {%- if site.data.i18n.[plang].[i18n-tag] -%}
     {{ site.data.i18n.[plang].[i18n-tag] }}
