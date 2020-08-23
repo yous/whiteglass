@@ -4,12 +4,8 @@ layout: default
 <div class="home">
 
   {% capture i18n-tag %}archive-{{ page.type }}{% endcapture %}
-  {%- capture default-title -%}
-    Archive of {{ page.type }} '%1'
-  {% endcapture %}
-  {%- capture title -%}
-    {% include i18n.html value=i18n-tag default=default-title %}
-  {% endcapture %}
+  {% capture default-title %}Archive of {{ page.type }} '%1'{% endcapture %}
+  {% capture title %}{% include i18n.html value=i18n-tag default=default-title %}{% endcapture %}
   <h1 class="page-heading">{{ title | replace: "%1", page.title | escape }}</h1>
 
   {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
