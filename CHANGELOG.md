@@ -2,8 +2,9 @@
 
 ## HEAD
 
-- Internationalization of whiteglass
-- Added German translation
+- URL-encode the ampersand in the URL (#32)
+- Internationalization of whiteglass (#11)
+- Added German translation (#11)
 - Add Korean translation
 
 ## 1.9.1 (2019-08-26)
