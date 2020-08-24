@@ -88,7 +88,7 @@
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-whiteglass"</span>
 </code></pre></div></div>
 
-<p>And add this line to your Jekyll site’s <code class="highlighter-rouge">_config.yml</code>:</p>
+<p>And add this line to your Jekyll site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-whiteglass</span>
 </code></pre></div></div>
@@ -109,10 +109,10 @@
   <li>Go to <a href="https://github.com/yous/whiteglass-template">yous/whiteglass-template</a>.</li>
   <li>Click “Use this template” button, and then create a repository.</li>
   <li>Generate a personal access token on <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>,
-select <code class="highlighter-rouge">public_repo</code> or <code class="highlighter-rouge">repo</code> depending on your repository.</li>
+select <code class="language-plaintext highlighter-rouge">public_repo</code> or <code class="language-plaintext highlighter-rouge">repo</code> depending on your repository.</li>
   <li>In the settings page of your repository, go to Secrets tab
-(<code class="highlighter-rouge">https://github.com/&lt;user&gt;/&lt;repo&gt;/settings/secrets</code>) and add a secret
-<code class="highlighter-rouge">JEKYLL_PAT</code> with the value of token you got from 3.</li>
+(<code class="language-plaintext highlighter-rouge">https://github.com/&lt;user&gt;/&lt;repo&gt;/settings/secrets</code>) and add a secret
+<code class="language-plaintext highlighter-rouge">JEKYLL_PAT</code> with the value of token you got from 3.</li>
   <li>Push some content, then GitHub Actions will generate the site.</li>
 </ol>
 
@@ -127,13 +127,13 @@ select <code class="highlighter-rouge">public_repo</code> or <code class="highli
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Edit <code class="highlighter-rouge">Gemfile</code> to use whiteglass theme:</p>
+    <p>Edit <code class="language-plaintext highlighter-rouge">Gemfile</code> to use whiteglass theme:</p>
 
     <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-whiteglass"</span>
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Edit <code class="highlighter-rouge">_config.yml</code> to use whiteglass theme and its plugins:</p>
+    <p>Edit <code class="language-plaintext highlighter-rouge">_config.yml</code> to use whiteglass theme and its plugins:</p>
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-whiteglass</span>
 <span class="na">plugins</span><span class="pi">:</span>
@@ -157,28 +157,37 @@ select <code class="highlighter-rouge">public_repo</code> or <code class="highli
   </li>
   <li>
     <p>Copy
-<a href="https://github.com/yous/whiteglass/blob/master/index.html"><code class="highlighter-rouge">index.html</code></a>,
-<a href="https://github.com/yous/whiteglass/blob/master/about.md"><code class="highlighter-rouge">about.md</code></a>,
-<a href="https://github.com/yous/whiteglass/blob/master/archives.md"><code class="highlighter-rouge">archives.md</code></a>,
-<a href="https://github.com/yous/whiteglass/blob/master/feed.xml"><code class="highlighter-rouge">feed.xml</code></a>,
-<a href="https://github.com/yous/whiteglass/blob/master/robots.txt"><code class="highlighter-rouge">robots.txt</code></a>,
-and <a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="highlighter-rouge">_data/navigation.yml</code></a>
+<a href="https://github.com/yous/whiteglass/blob/master/index.html"><code class="language-plaintext highlighter-rouge">index.html</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/about.md"><code class="language-plaintext highlighter-rouge">about.md</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/archives.md"><code class="language-plaintext highlighter-rouge">archives.md</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/feed.xml"><code class="language-plaintext highlighter-rouge">feed.xml</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/robots.txt"><code class="language-plaintext highlighter-rouge">robots.txt</code></a>,
+<a href="https://github.com/yous/whiteglass/blob/master/_data/i18n.yml"><code class="language-plaintext highlighter-rouge">_data/i18n.yml</code></a>,
+and <a href="https://github.com/yous/whiteglass/blob/master/_data/navigation.yml"><code class="language-plaintext highlighter-rouge">_data/navigation.yml</code></a>
 from the theme:</p>
 
     <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm </span>index.md
 curl <span class="nt">-L</span> <span class="nt">-O</span> <span class="s2">"https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml,robots.txt}"</span>
-curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span class="nt">-o</span> _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
+curl <span class="nt">-L</span> <span class="nt">--create-dirs</span> <span class="nt">-o</span> _data/#1 <span class="s2">"https://github.com/yous/whiteglass/raw/master/_data/{navigation.yml,i18n.yml}"</span>
 </code></pre></div>    </div>
   </li>
   <li>
     <p>Install gems and you’re good to go! The blog will be available on
-<code class="highlighter-rouge">http://127.0.0.1:4000</code>.</p>
+<code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000</code>.</p>
 
     <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
 </span>bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div>    </div>
   </li>
 </ol>
+
+<h2>Upgrading</h2>
+
+<h3>From Version &lt; 1.9.1</h3>
+
+<p>Copy
+<a href="https://github.com/yous/whiteglass/blob/master/_data/i18n.yml"><code class="language-plaintext highlighter-rouge">_data/i18n.yml</code></a>
+from the theme.</p>
 
 <h2>Deployment to GitHub Pages using Travis CI</h2>
 
@@ -187,16 +196,16 @@ which is <a href="https://help.github.com/articles/configuring-jekyll-plugins/">
 If you want to use full features like categories and tags, I recommend you to
 use Travis CI or other CI services.</p>
 
-<p>To deploy using Travis CI, first copy the <a href="https://github.com/yous/whiteglass/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a>
-of this repository. You can change <code class="highlighter-rouge">target-branch</code> (<code class="highlighter-rouge">gh-pages</code> by default) and
-<code class="highlighter-rouge">on.branch</code> (<code class="highlighter-rouge">master</code> by default) as you want. If you want further
+<p>To deploy using Travis CI, first copy the <a href="https://github.com/yous/whiteglass/blob/master/.travis.yml"><code class="language-plaintext highlighter-rouge">.travis.yml</code></a>
+of this repository. You can change <code class="language-plaintext highlighter-rouge">target-branch</code> (<code class="language-plaintext highlighter-rouge">gh-pages</code> by default) and
+<code class="language-plaintext highlighter-rouge">on.branch</code> (<code class="language-plaintext highlighter-rouge">master</code> by default) as you want. If you want further
 customization, see <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis CI’s documentation page</a>.</p>
 
-<p>You’ll see there’s <code class="highlighter-rouge">github-token: $GITHUB_TOKEN</code>, and this is what you should
+<p>You’ll see there’s <code class="language-plaintext highlighter-rouge">github-token: $GITHUB_TOKEN</code>, and this is what you should
 configure. Go to your <a href="https://github.com/settings/tokens">personal access tokens</a>
-page, and generate new token with <code class="highlighter-rouge">public_repo</code> or <code class="highlighter-rouge">repo</code> permission as you
+page, and generate new token with <code class="language-plaintext highlighter-rouge">public_repo</code> or <code class="language-plaintext highlighter-rouge">repo</code> permission as you
 need. Then go to Travis CI’s settings page of your repository, and add a new
-environment variable <code class="highlighter-rouge">GITHUB_TOKEN</code> with the value of the token you generated.</p>
+environment variable <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> with the value of the token you generated.</p>
 
 <h2>Usage</h2>
 
@@ -205,12 +214,12 @@ environment variable <code class="highlighter-rouge">GITHUB_TOKEN</code> with th
 <p>To override the default structure and style of whiteglass, simply create the
 concerned directory at the root of your site, copy the file you wish to
 customize to that directory, and then edit the file. e.g., to override the
-<a href="_includes/footer_content.html"><code class="highlighter-rouge">_includes/footer_content.html</code></a> file to add
-contents to footer, create an <code class="highlighter-rouge">_includes</code> directory, copy
-<code class="highlighter-rouge">_includes/footer_content.html</code> from jekyll-whiteglass gem folder to
-<code class="highlighter-rouge">&lt;your-site&gt;/_includes</code> and start editing that file.</p>
+<a href="_includes/footer_content.html"><code class="language-plaintext highlighter-rouge">_includes/footer_content.html</code></a> file to add
+contents to footer, create an <code class="language-plaintext highlighter-rouge">_includes</code> directory, copy
+<code class="language-plaintext highlighter-rouge">_includes/footer_content.html</code> from jekyll-whiteglass gem folder to
+<code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/_includes</code> and start editing that file.</p>
 
-<p>For example, you can add favicons to <code class="highlighter-rouge">_includes/head_custom.html</code>:</p>
+<p>For example, you can add favicons to <code class="language-plaintext highlighter-rouge">_includes/head_custom.html</code>:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">href=</span><span class="s">"/whiteglass/favicon.ico"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"/whiteglass/apple-touch-icon.png"</span><span class="nt">&gt;</span>
@@ -221,42 +230,42 @@ contents to footer, create an <code class="highlighter-rouge">_includes</code> d
 </code></pre></div></div>
 
 <p>The site’s default CSS is in the gem itself,
-<a href="assets/main.scss"><code class="highlighter-rouge">assets/main.scss</code></a>. To override the default CSS, the file
+<a href="assets/main.scss"><code class="language-plaintext highlighter-rouge">assets/main.scss</code></a>. To override the default CSS, the file
 has to exist at your site source. Do either of the following:</p>
 
 <ul>
-  <li>Create a new instance of <code class="highlighter-rouge">main.scss</code> at site source
+  <li>Create a new instance of <code class="language-plaintext highlighter-rouge">main.scss</code> at site source
     <ul>
-      <li>Create a new file <code class="highlighter-rouge">main.scss</code> at <code class="highlighter-rouge">&lt;your-site&gt;/assets/</code></li>
+      <li>Create a new file <code class="language-plaintext highlighter-rouge">main.scss</code> at <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/assets/</code></li>
       <li>Add the frontmatter dashes, and</li>
-      <li>Add <code class="highlighter-rouge">@import "whiteglass";</code>, to <code class="highlighter-rouge">&lt;your-site&gt;/assets/main.scss</code></li>
+      <li>Add <code class="language-plaintext highlighter-rouge">@import "whiteglass";</code>, to <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/assets/main.scss</code></li>
       <li>Add your custom CSS</li>
     </ul>
   </li>
   <li>Download the file from this repo
     <ul>
-      <li>Create a new file <code class="highlighter-rouge">main.scss</code> at <code class="highlighter-rouge">&lt;your-site&gt;/assets/</code></li>
-      <li>Copy the contents at <a href="assets/main.scss"><code class="highlighter-rouge">assets/main.scss</code></a> onto the <code class="highlighter-rouge">main.scss</code> you just created, and edit away</li>
+      <li>Create a new file <code class="language-plaintext highlighter-rouge">main.scss</code> at <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/assets/</code></li>
+      <li>Copy the contents at <a href="assets/main.scss"><code class="language-plaintext highlighter-rouge">assets/main.scss</code></a> onto the <code class="language-plaintext highlighter-rouge">main.scss</code> you just created, and edit away</li>
     </ul>
   </li>
   <li>Copy directly from jekyll-whiteglass gem
     <ul>
-      <li>Go to your local jekyll-whiteglass gem installation directory (run <code class="highlighter-rouge">bundle show jekyll-whiteglass</code> to get the path to it)</li>
-      <li>Copy the <code class="highlighter-rouge">assets/</code> folder from there into the root of <code class="highlighter-rouge">&lt;your-site&gt;</code></li>
-      <li>Change whatever values you want, inside <code class="highlighter-rouge">&lt;your-site&gt;/assets/main.scss</code></li>
+      <li>Go to your local jekyll-whiteglass gem installation directory (run <code class="language-plaintext highlighter-rouge">bundle show jekyll-whiteglass</code> to get the path to it)</li>
+      <li>Copy the <code class="language-plaintext highlighter-rouge">assets/</code> folder from there into the root of <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;</code></li>
+      <li>Change whatever values you want, inside <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/assets/main.scss</code></li>
     </ul>
   </li>
 </ul>
 
 <h3>Locale</h3>
 
-<p><code class="highlighter-rouge">site.lang</code> is used to declare the primary language for each web page within the
+<p><code class="language-plaintext highlighter-rouge">site.lang</code> is used to declare the primary language for each web page within the
 site.</p>
 
-<p><code class="highlighter-rouge">lang: en-US</code> sets the <code class="highlighter-rouge">lang</code> attribute for the site to the United States flavor
-of English, while <code class="highlighter-rouge">en-GB</code> would be for the United Kingdom style of English.
-Country codes are optional and the shorter variation <code class="highlighter-rouge">lang: en</code> is also
-acceptable. You may want to write a post in different language, then add <code class="highlighter-rouge">lang</code>
+<p><code class="language-plaintext highlighter-rouge">lang: en-US</code> sets the <code class="language-plaintext highlighter-rouge">lang</code> attribute for the site to the United States flavor
+of English, while <code class="language-plaintext highlighter-rouge">en-GB</code> would be for the United Kingdom style of English.
+Country codes are optional and the shorter variation <code class="language-plaintext highlighter-rouge">lang: en</code> is also
+acceptable. You may want to write a post in different language, then add <code class="language-plaintext highlighter-rouge">lang</code>
 attribute to the frontmatter of that post:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
@@ -264,22 +273,24 @@ attribute to the frontmatter of that post:</p>
 <span class="na">lang</span><span class="pi">:</span> <span class="s">ko</span>
 </code></pre></div></div>
 
+<p>The date format and other fixed strings are translated using the <code class="language-plaintext highlighter-rouge">_data/i18n.yml</code> file. If your language is not yet included, feel free to open a <a href="https://github.com/yous/whiteglass/pulls">pull request</a>.</p>
+
 <h3>Description</h3>
 
-<p><code class="highlighter-rouge">site.description</code> describes the site. This is mainly used in meta descriptions
-for improving SEO. Also, you can set <code class="highlighter-rouge">description</code> attribute for each post:</p>
+<p><code class="language-plaintext highlighter-rouge">site.description</code> describes the site. This is mainly used in meta descriptions
+for improving SEO. Also, you can set <code class="language-plaintext highlighter-rouge">description</code> attribute for each post:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">Awesome Post</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">This is an awesome post.</span>
 </code></pre></div></div>
 
-<p>If you don’t specify <code class="highlighter-rouge">post.description</code>, then <code class="highlighter-rouge">post.excerpt</code> will be used if it
+<p>If you don’t specify <code class="language-plaintext highlighter-rouge">post.description</code>, then <code class="language-plaintext highlighter-rouge">post.excerpt</code> will be used if it
 exist.</p>
 
 <h3>External URL</h3>
 
-<p><code class="highlighter-rouge">external-url</code> turns the title of your post to a link. Specify a URL which you
+<p><code class="language-plaintext highlighter-rouge">external-url</code> turns the title of your post to a link. Specify a URL which you
 want to link to.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
@@ -288,11 +299,11 @@ want to link to.</p>
 </code></pre></div></div>
 
 <p>Then the title of your post would look like a link with text
-<code class="highlighter-rouge">Jekyll whiteglass theme →</code>. This also applies to your blog feed.</p>
+<code class="language-plaintext highlighter-rouge">Jekyll whiteglass theme →</code>. This also applies to your blog feed.</p>
 
 <h3>Category</h3>
 
-<p>Each post can have <code class="highlighter-rouge">categories</code> attribute. It can be a string or an array. This
+<p>Each post can have <code class="language-plaintext highlighter-rouge">categories</code> attribute. It can be a string or an array. This
 will be displayed on index, archive and each post, and provide a link to the
 archive of category.</p>
 
@@ -310,7 +321,7 @@ archive of category.</p>
 
 <h3>Tag</h3>
 
-<p>Each post can have <code class="highlighter-rouge">tags</code> attribute. It can be a string or an array. This will
+<p>Each post can have <code class="language-plaintext highlighter-rouge">tags</code> attribute. It can be a string or an array. This will
 be displayed on index, archive and each post, and provide a link to the archive
 of tag.</p>
 
@@ -328,7 +339,7 @@ of tag.</p>
 
 <h3>Feed</h3>
 
-<p>Create <code class="highlighter-rouge">&lt;your-site&gt;/feed.xml</code> with:</p>
+<p>Create <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/feed.xml</code> with:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">feed</span>
@@ -342,7 +353,7 @@ your site’s config.</p>
   <span class="na">path</span><span class="pi">:</span> <span class="s">atom.xml</span>
 </code></pre></div></div>
 
-<p>Then create <code class="highlighter-rouge">&lt;your-site&gt;/atom.xml</code> with the same content of <code class="highlighter-rouge">feed.xml</code> above.</p>
+<p>Then create <code class="language-plaintext highlighter-rouge">&lt;your-site&gt;/atom.xml</code> with the same content of <code class="language-plaintext highlighter-rouge">feed.xml</code> above.</p>
 
 <h3>Comments</h3>
 
@@ -350,17 +361,17 @@ your site’s config.</p>
 
 <p>To enable comments on pages and posts:</p>
 <ol>
-  <li>Overwrite the <code class="highlighter-rouge">_includes/custom_comments_provider.html</code> with your custom provider of comments.</li>
-  <li>Add <code class="highlighter-rouge">comments: true</code> to your <code class="highlighter-rouge">_config.yml</code>.</li>
+  <li>Overwrite the <code class="language-plaintext highlighter-rouge">_includes/custom_comments_provider.html</code> with your custom provider of comments.</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">comments: true</code> to your <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
 </ol>
 
-<p>To disable comments on certain pages or posts specify <code class="highlighter-rouge">comments: false</code> in the front matter of the page or post.</p>
+<p>To disable comments on certain pages or posts specify <code class="language-plaintext highlighter-rouge">comments: false</code> in the front matter of the page or post.</p>
 
 <h3>Metadata for SEO</h3>
 
 <h4>Keywords</h4>
 
-<p>Each post can have <code class="highlighter-rouge">keywords</code> attribute. This is a comma-separated list which is
+<p>Each post can have <code class="language-plaintext highlighter-rouge">keywords</code> attribute. This is a comma-separated list which is
 used in meta descriptions for improving SEO.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
@@ -379,31 +390,31 @@ used in meta descriptions for improving SEO.</p>
 <h4>Twitter</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">site.twitter_username</code> sets <code class="highlighter-rouge">twitter:site</code> and <code class="highlighter-rouge">twitter:creator</code> meta tag</li>
-  <li><code class="highlighter-rouge">site.twitter_image</code> sets <code class="highlighter-rouge">twitter:image:src</code> meta tag</li>
-  <li><code class="highlighter-rouge">page.twitter_card.type</code> sets <code class="highlighter-rouge">twitter:card</code> meta tag (default: <code class="highlighter-rouge">summary</code>)
+  <li><code class="language-plaintext highlighter-rouge">site.twitter_username</code> sets <code class="language-plaintext highlighter-rouge">twitter:site</code> and <code class="language-plaintext highlighter-rouge">twitter:creator</code> meta tag</li>
+  <li><code class="language-plaintext highlighter-rouge">site.twitter_image</code> sets <code class="language-plaintext highlighter-rouge">twitter:image:src</code> meta tag</li>
+  <li><code class="language-plaintext highlighter-rouge">page.twitter_card.type</code> sets <code class="language-plaintext highlighter-rouge">twitter:card</code> meta tag (default: <code class="language-plaintext highlighter-rouge">summary</code>)
     <ul>
-      <li>If <code class="highlighter-rouge">page.twitter_card.type</code> is <code class="highlighter-rouge">gallery</code>, it sets <code class="highlighter-rouge">twitter:image0</code>, <code class="highlighter-rouge">twitter:image1</code>, <code class="highlighter-rouge">twitter:image2</code> and <code class="highlighter-rouge">twitter:image3</code> meta tags with <code class="highlighter-rouge">page.twitter_card.image</code>, <code class="highlighter-rouge">page.twitter_card.image1</code>, <code class="highlighter-rouge">page.twitter_card.image2</code> and <code class="highlighter-rouge">page.twitter_card.image3</code>, respectively</li>
-      <li>If <code class="highlighter-rouge">page.twitter_card.type</code> is <code class="highlighter-rouge">photo</code>, <code class="highlighter-rouge">page.twitter_card.width</code> sets <code class="highlighter-rouge">twitter:image:width</code> meta tag and <code class="highlighter-rouge">page.twitter_card.height</code> sets <code class="highlighter-rouge">twitter:image:height</code> meta tag</li>
+      <li>If <code class="language-plaintext highlighter-rouge">page.twitter_card.type</code> is <code class="language-plaintext highlighter-rouge">gallery</code>, it sets <code class="language-plaintext highlighter-rouge">twitter:image0</code>, <code class="language-plaintext highlighter-rouge">twitter:image1</code>, <code class="language-plaintext highlighter-rouge">twitter:image2</code> and <code class="language-plaintext highlighter-rouge">twitter:image3</code> meta tags with <code class="language-plaintext highlighter-rouge">page.twitter_card.image</code>, <code class="language-plaintext highlighter-rouge">page.twitter_card.image1</code>, <code class="language-plaintext highlighter-rouge">page.twitter_card.image2</code> and <code class="language-plaintext highlighter-rouge">page.twitter_card.image3</code>, respectively</li>
+      <li>If <code class="language-plaintext highlighter-rouge">page.twitter_card.type</code> is <code class="language-plaintext highlighter-rouge">photo</code>, <code class="language-plaintext highlighter-rouge">page.twitter_card.width</code> sets <code class="language-plaintext highlighter-rouge">twitter:image:width</code> meta tag and <code class="language-plaintext highlighter-rouge">page.twitter_card.height</code> sets <code class="language-plaintext highlighter-rouge">twitter:image:height</code> meta tag</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">page.twitter_card.creator</code> sets <code class="highlighter-rouge">twitter:creator</code> meta tag. It overrides <code class="highlighter-rouge">site.twitter_username</code></li>
-  <li><code class="highlighter-rouge">page.twitter_card.image</code> sets <code class="highlighter-rouge">twitter:image:src</code> meta tag if <code class="highlighter-rouge">page.twitter_card.type</code> is not <code class="highlighter-rouge">gallery</code>. It overrides <code class="highlighter-rouge">site.twitter_image</code></li>
+  <li><code class="language-plaintext highlighter-rouge">page.twitter_card.creator</code> sets <code class="language-plaintext highlighter-rouge">twitter:creator</code> meta tag. It overrides <code class="language-plaintext highlighter-rouge">site.twitter_username</code></li>
+  <li><code class="language-plaintext highlighter-rouge">page.twitter_card.image</code> sets <code class="language-plaintext highlighter-rouge">twitter:image:src</code> meta tag if <code class="language-plaintext highlighter-rouge">page.twitter_card.type</code> is not <code class="language-plaintext highlighter-rouge">gallery</code>. It overrides <code class="language-plaintext highlighter-rouge">site.twitter_image</code></li>
 </ul>
 
 <h4>Facebook</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">site.facebook_app_id</code> sets <code class="highlighter-rouge">fb:admins</code> meta tag</li>
-  <li><code class="highlighter-rouge">site.facebook_page</code> sets <code class="highlighter-rouge">article:author</code> meta tag</li>
-  <li><code class="highlighter-rouge">site.facebook_image</code> sets <code class="highlighter-rouge">og:image</code> meta tag</li>
-  <li><code class="highlighter-rouge">page.facebook.image</code> sets <code class="highlighter-rouge">og:image</code> meta tag. It overrides <code class="highlighter-rouge">site.facebook_image</code></li>
+  <li><code class="language-plaintext highlighter-rouge">site.facebook_app_id</code> sets <code class="language-plaintext highlighter-rouge">fb:admins</code> meta tag</li>
+  <li><code class="language-plaintext highlighter-rouge">site.facebook_page</code> sets <code class="language-plaintext highlighter-rouge">article:author</code> meta tag</li>
+  <li><code class="language-plaintext highlighter-rouge">site.facebook_image</code> sets <code class="language-plaintext highlighter-rouge">og:image</code> meta tag</li>
+  <li><code class="language-plaintext highlighter-rouge">page.facebook.image</code> sets <code class="language-plaintext highlighter-rouge">og:image</code> meta tag. It overrides <code class="language-plaintext highlighter-rouge">site.facebook_image</code></li>
 </ul>
 
 <h3>Navigation</h3>
 
-<p>To define header links, add titles and URLs under the <code class="highlighter-rouge">main</code> key in
-<code class="highlighter-rouge">_data/navigation.yml</code>:</p>
+<p>To define header links, add titles and URLs under the <code class="language-plaintext highlighter-rouge">main</code> key in
+<code class="language-plaintext highlighter-rouge">_data/navigation.yml</code>:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">main</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">About"</span>

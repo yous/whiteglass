@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://yous.github.io/whiteglass/2017/01/02/my-example-post/</loc>
+<loc>https://yous.github.io/whiteglass/2017/01/01/my-example-post/</loc>
+<lastmod>2017-01-01T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://yous.github.io/whiteglass/2017/01/02/my-german-post/</loc>
 <lastmod>2017-01-02T00:00:00+00:00</lastmod>
 </url>
 <url>
