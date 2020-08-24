@@ -36,3 +36,19 @@ de-AT:
       "Juli", "August", "September", "Oktober", "November", "Dezember"]
     abbr_month_names: ["Jän", "Feb", "Mär", "Apr", "Mai", "Jun",
       "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
+ko:
+  date:
+    format: "%Y년 %-m월 %-d일"
+    abbr_day_names: ["일", "월", "화", "수", "목", "금", "토"]
+    abbr_month_names: ["1월", "2월", "3월", "4월", "5월", "6월",
+      "7월", "8월", "9월", "10월", "11월", "12월"]
+    day_names: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+    month_names: ["1월", "2월", "3월", "4월", "5월", "6월",
+      "7월", "8월", "9월", "10월", "11월", "12월"]
+  morelink: "계속 읽기"
+  page-older: "이전"
+  page-newer: "다음"
+  archive: "블로그 아카이브"
+  archive-category: "'%1' 카테고리 아카이브"
+  archive-tag: "'%1' 태그 아카이브"
+  comments: "댓글"

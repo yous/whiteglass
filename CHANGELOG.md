@@ -4,6 +4,7 @@
 
 - Internationalization of whiteglass
 - Added German translation
+- Add Korean translation
 
 ## 1.9.1 (2019-08-26)
 
