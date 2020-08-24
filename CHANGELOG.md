@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.10.0 (2020-08-24)
 
 - URL-encode the ampersand in the URL (#32)
 - Internationalization of whiteglass (#11)
