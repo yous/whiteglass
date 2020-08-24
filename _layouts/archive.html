@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="home">
 
-  <h1 class="page-heading">Blog Archive</h1>
+  <h1 class="page-heading">{% include i18n.html value="archive" default="Blog Archive" %}</h1>
 
   {{ content }}
 
@@ -16,7 +16,7 @@ layout: default
 
       <li>
         <span class="post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}
+          {% include date.html date=post.date lang=lang %}
           {% if post.categories != empty or post.tags != empty %}
             {% include category_links.html categories=post.categories tags=post.tags %}
           {% endif %}
