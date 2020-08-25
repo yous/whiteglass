@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Fix i18n.yml for de-AT (#39)
+
 ## 1.10.0 (2020-08-24)
 
 - URL-encode the ampersand in the URL (#32)
