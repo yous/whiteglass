@@ -32,7 +32,7 @@ de:
   comments: "Kommentare"
 de-AT:
   date:
-    month_names: ["Jänner", "Feber", "März", "April", "Mai", "Juni",
+    month_names: ["Jänner", "Februar", "März", "April", "Mai", "Juni",
       "Juli", "August", "September", "Oktober", "November", "Dezember"]
     abbr_month_names: ["Jän", "Feb", "Mär", "Apr", "Mai", "Jun",
       "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
