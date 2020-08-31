@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.10.1 (2020-08-31)
 
 - Fix i18n.yml for de-AT (#39)
 
