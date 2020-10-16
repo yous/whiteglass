@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.10.2 (2020-10-16)
 
 - Update Google Fonts to v2 API
 
