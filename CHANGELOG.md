@@ -1,5 +1,11 @@
 # ChangeLog
 
+## HEAD
+
+- Don't ship _config.yml (#40)
+- Include i18n.yml only under _data for gem
+- Add missing robots.txt
+
 ## 1.10.2 (2020-10-16)
 
 - Update Google Fonts to v2 API
