@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").select do |f|
-      f.match(%r{^(assets|_layouts|_includes|_sass|_data|LICENSE|README|CHANGELOG)}i)
+      f.match(%r{^(assets|_layouts|_includes|_sass|_data\/i18n\.yml|LICENSE|README|CHANGELOG)}i)
     end
   end
 
