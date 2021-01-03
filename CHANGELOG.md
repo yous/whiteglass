@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.10.3 (2021-01-03)
 
 - Don't ship _config.yml (#40)
 - Include i18n.yml only under _data for gem
