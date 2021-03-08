@@ -52,3 +52,19 @@ ko:
   archive-category: "'%1' 카테고리 아카이브"
   archive-tag: "'%1' 태그 아카이브"
   comments: "댓글"
+fr:
+  date:
+    format: "%-d %B %Y" 
+    abbr_day_names: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
+    abbr_month_names: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jui",
+      "Jui", "Aou", "Sep", "Oct", "Nov", "Dec"]
+    day_names: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+    month_names: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
+  morelink: "Lire plus"
+  page-older: "Plus ancien"
+  page-newer: "Récent"
+  archive: "Archives"
+  archive-category: "Archives de la catégorie '%1'"
+  archive-tag: "Archives du tag '%1'"
+  comments: "Commentaires"
