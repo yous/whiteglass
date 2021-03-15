@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.10.4 (2021-03-15)
+
+- Add French translation (#42)
+
 ## 1.10.3 (2021-01-03)
 
 - Don't ship _config.yml (#40)
