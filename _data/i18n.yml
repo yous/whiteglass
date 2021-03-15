@@ -54,7 +54,7 @@ ko:
   comments: "댓글"
 fr:
   date:
-    format: "%-d %B %Y" 
+    format: "%-d %B %Y"
     abbr_day_names: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
     abbr_month_names: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jui",
       "Jui", "Aou", "Sep", "Oct", "Nov", "Dec"]
