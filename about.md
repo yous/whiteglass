@@ -36,7 +36,9 @@ gem install jekyll-whiteglass
 
 1. Go to [yous/whiteglass-template](https://github.com/yous/whiteglass-template).
 2. Click "Use this template" button, and then create a repository.
-3. Push some content, then GitHub Actions will generate the site.
+3. Change the options defined in _config.yml. See [Configuration](https://github.com/yous/whiteglass-template#configuration)
+   section under whiteglass-template.
+5. Push some content, then GitHub Actions will generate the site.
 
 ## Manual Setup
 
