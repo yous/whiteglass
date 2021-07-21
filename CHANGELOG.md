@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.11.0 (2021-07-21)
+
+- Update for Google Analytics 4
+
 ## 1.10.4 (2021-03-15)
 
 - Add French translation (#42)
