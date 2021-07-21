@@ -346,3 +346,11 @@ To enable Google Analytics, add the following lines to your Jekyll site:
 ``` yaml
 google_analytics: UA-NNNNNNNN-N
 ```
+
+For Google Analytics 4, add the following lines:
+
+``` yaml
+google_analytics: G-NNNNNNNNNN
+```
+
+Replace `N`s with your specific ID.
