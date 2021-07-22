@@ -21,7 +21,7 @@ node-save-cache: &node-save-cache
 jobs:
   build:
     docker:
-      - image: cimg/ruby:3.0-node
+      - image: cimg/ruby:3.0-browsers
         environment:
           <<: *node-environments
     steps:
@@ -52,6 +52,10 @@ jobs:
           kill -9 "$(cat jekyll.pid)"
           rm -f jekyll.pid
           rm -rf _tmp_site
+      - persist_to_workspace:
+          root: .
+          paths:
+            - _site
   validate:
     docker:
       - image: cimg/python:3.9-browsers
