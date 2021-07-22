@@ -27,14 +27,13 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: gem-{{ arch }}-{{ checksum 'Gemfile' }}
+          key: gem-{{ arch }}-{{ checksum "Gemfile" }}
       - run: |
           gem install bundler
-          bundle config set deployment 'true'
           bundle config set path vendor/bundle
           bundle update
       - save_cache:
-          key: gem-{{ arch }}-{{ checksum 'Gemfile' }}
+          key: gem-{{ arch }}-{{ checksum "Gemfile" }}
           paths:
             - vendor/bundle
       - *node-global-path
