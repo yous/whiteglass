@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  ruby: circleci/ruby@1.1
-
 node-environments: &node-environments
   NPM_CONFIG_PREFIX: '~/.npm-global'
 
@@ -29,7 +26,17 @@ jobs:
           <<: *node-environments
     steps:
       - checkout
-      - ruby/install-deps
+      - restore_cache:
+          key: gem-{{ arch }}-{{ checksum 'Gemfile' }}
+      - run: |
+          gem install bundler
+          bundle config set deployment 'true'
+          bundle config set path vendor/bundle
+          bundle update
+      - save_cache:
+          key: gem-{{ arch }}-{{ checksum 'Gemfile' }}
+          paths:
+            - vendor/bundle
       - *node-global-path
       - *node-restore-cache
       - run: npm install -g pa11y-ci
