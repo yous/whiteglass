@@ -47,8 +47,8 @@ jobs:
           bundle exec jekyll build
       - run: |
           (bundle exec jekyll server -d _tmp_site & echo $! >&3) 3>jekyll.pid | grep -q 'Server running'
-          pa11y-ci --sitemap http://localhost:4000/whiteglass/sitemap.xml \
-            --sitemap-find 'https://yous.github.io/whiteglass' --sitemap-replace 'http://localhost:4000'
+          pa11y-ci --sitemap 'http://localhost:4000/whiteglass/sitemap.xml' \
+            --sitemap-find 'https://yous.github.io/whiteglass' --sitemap-replace 'http://localhost:4000/whiteglass'
           kill -9 "$(cat jekyll.pid)"
           rm -f jekyll.pid
           rm -rf _tmp_site
