@@ -27,9 +27,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: gem-{{ arch }}-{{ checksum "Gemfile" }}
+          keys:
+            - gem-{{ arch }}-{{ checksum "Gemfile" }}
+            - gem-{{ arch }}-
       - run: |
-          gem install bundler webrick
+          gem install bundler
           bundle config set path vendor/bundle
           bundle update
       - save_cache:
