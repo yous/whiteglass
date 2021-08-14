@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Don't break h1, h2, h3 for Korean
+
 ## 1.11.0 (2021-07-21)
 
 - Update for Google Analytics 4
