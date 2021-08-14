@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.11.1 (2021-08-14)
 
 - Don't break h1, h2, h3 for Korean
 
