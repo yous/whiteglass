@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; }
 
+h1:lang(ko), h2:lang(ko), h3:lang(ko) { word-break: keep-all; }
+
 /** Links */
 a { color: #2568ba; text-decoration: none; }
 
