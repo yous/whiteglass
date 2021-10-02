@@ -76,7 +76,7 @@ jobs:
       - run: html5validator --Werror --also-check-css --also-check-svg --root _site/
   deploy:
     docker:
-      - image: cimg/node:16.5
+      - image: cimg/node:16.10
         environment:
           <<: *node-environments
     steps:
