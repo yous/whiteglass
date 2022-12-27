@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.11.2 (2022-12-27)
+
+- Fix SASS warnings (#48)
+
 ## 1.11.1 (2021-08-14)
 
 - Don't break h1, h2, h3 for Korean
