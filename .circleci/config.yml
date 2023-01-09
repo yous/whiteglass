@@ -21,7 +21,7 @@ node-save-cache: &node-save-cache
 jobs:
   build:
     docker:
-      - image: cimg/ruby:3.1-browsers
+      - image: cimg/ruby:3.1.2-browsers
         environment:
           <<: *node-environments
     steps:
@@ -46,11 +46,11 @@ jobs:
           bundle exec jekyll clean
           bundle exec jekyll build
       - run: |
-          (bundle exec jekyll server -d _tmp_site & echo $! >&3) 3>jekyll.pid | grep -q 'Server running'
+          (bundle exec jekyll serve -d _tmp_site --no-watch & echo $! >&3) 3>_jekyll.pid | grep -q 'Server running'
           pa11y-ci --sitemap 'http://localhost:4000/whiteglass/sitemap.xml' \
             --sitemap-find 'https://yous.github.io/whiteglass' --sitemap-replace 'http://localhost:4000/whiteglass'
-          kill -9 "$(cat jekyll.pid)"
-          rm -f jekyll.pid
+          kill -9 "$(cat _jekyll.pid)"
+          rm -f _jekyll.pid
           rm -rf _tmp_site
       - persist_to_workspace:
           root: .
