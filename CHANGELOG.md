@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.11.3 (2023-08-30)
+
+- Fix SASS calc() issue (#50)
+
 ## 1.11.2 (2022-12-27)
 
 - Fix SASS warnings (#48)
