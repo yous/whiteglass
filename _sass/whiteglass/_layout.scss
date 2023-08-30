@@ -199,7 +199,7 @@
  * Pagination
  */
 .pagination {
-  padding: calc($spacing-unit / 2) 0;
+  padding: $spacing-unit * 0.5 0;
   border-top: 1px solid $grey-color-light;
   border-bottom: 1px solid $grey-color-light;
   text-align: center;
