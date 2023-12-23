@@ -66,4 +66,18 @@
 
   {% include fonts.html %}
   {% include google_analytics.html %}
+
+  <!-- mathjax -->
+  <!-- https://docs.mathjax.org/en/v3.0-latest/web/start.html#using-mathjax-from-a-content-delivery-network-cdn -->
+  <!-- https://docs.mathjax.org/en/v3.0-latest/web/start.html#configuring-mathjax -->
+  <script>
+      MathJax = {
+          tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+      };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>  
 </head>
