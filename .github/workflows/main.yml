@@ -56,7 +56,8 @@ jobs:
       - run: |
           mkdir _site
           tar -xf artifact.tar -C _site/
-      - env:
+      - name: Run pa11y-ci
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           url="$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')"
