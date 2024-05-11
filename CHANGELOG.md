@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Remove duplicated last slash from feed id
+
 ## 1.11.3 (2023-08-30)
 
 - Fix SASS calc() issue (#50)
