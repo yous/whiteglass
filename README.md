@@ -1,7 +1,7 @@
 # whiteglass
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-whiteglass.svg)](https://badge.fury.io/rb/jekyll-whiteglass)
-[![CircleCI](https://circleci.com/gh/yous/whiteglass/tree/master.svg?style=shield)](https://circleci.com/gh/yous/whiteglass/tree/master)
+[![CI](https://github.com/yous/whiteglass/actions/workflows/main.yml/badge.svg)](https://github.com/yous/whiteglass/actions/workflows/main.yml)
 
 Minimal, responsive Jekyll theme for hackers.
 

@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  pa11y-ci:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          check-latest: true
+      - run: npm install -g pa11y-ci
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+      - run: |
+          mkdir _site
+          tar -xf artifact.tar -C _site/
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url="$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')"
+          (bundle exec jekyll serve -d _tmp_site --no-watch & echo $! >&3) 3>_jekyll.pid | grep -q 'Server running'
+          pa11y-ci --sitemap 'http://localhost:4000/whiteglass/sitemap.xml' \
+            --sitemap-find "$url" --sitemap-replace 'http://localhost:4000/whiteglass/'
+          kill -9 "$(cat _jekyll.pid)"
+          rm -f _jekyll.pid
+          rm -rf _tmp_site
+
+  validate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -U html5validator
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+      - run: |
+          mkdir _site
+          tar -xf artifact.tar -C _site/
+      - run: html5validator --Werror --also-check-css --also-check-svg --root _site/
+
+  deploy:
+    needs: [build, pa11y-ci, validate]
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
