@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Fix Sass warnings
+
 ## 1.11.4 (2024-05-11)
 
 - Remove duplicated last slash from feed id
