@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.11.5 (2024-07-31)
 
 - Fix Sass warnings
 
