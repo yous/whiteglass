@@ -18,8 +18,8 @@ $background-color: #fdfdfd;
 $brand-color:      #2568ba;
 
 $grey-color:       #757575;
-$grey-color-light: lighten($grey-color, 45%);
-$grey-color-dark:  darken($grey-color, 20%);
+$grey-color-light: color.adjust($grey-color, $lightness: 45%);
+$grey-color-dark:  color.adjust($grey-color, $lightness: -20%);
 
 // Width of the content area
 $content-width:    800px;

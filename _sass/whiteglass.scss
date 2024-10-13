@@ -13,8 +13,8 @@ $background-color: #fdfdfd !default;
 $brand-color:      #2568ba !default;
 
 $grey-color:       #757575 !default;
-$grey-color-light: lighten($grey-color, 45%) !default;
-$grey-color-dark:  darken($grey-color, 20%) !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 45%) !default;
+$grey-color-dark:  color.adjust($grey-color, $lightness: -20%) !default;
 
 // Width of the content area
 $content-width:    800px !default;
