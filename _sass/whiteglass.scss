@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Define defaults for each variable.
 $base-font-family: Bitter, "Apple SD Gothic Neo", "Noto Sans", "Source Han Sans", "Noto Sans CJK JP", "Source Han Sans JP", "Noto Sans CJK KR", "Source Han Sans KR", NanumBarunGothic, AppleGothic, "Malgun Gothic", Dotum, sans-serif !default;
 $monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace !default;
