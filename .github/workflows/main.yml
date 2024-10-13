@@ -53,7 +53,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-      - run: |
+      - name: Extract artifact
+        run: |
           mkdir _site
           tar -xf artifact.tar -C _site/
       - name: Run pa11y-ci
@@ -72,24 +73,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: pip install -U html5validator
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-      - run: |
+      - name: Extract artifact
+        run: |
           mkdir _site
           tar -xf artifact.tar -C _site/
-      - run: html5validator --Werror --also-check-css --also-check-svg --root _site/
+      - name: HTML5Validator
+        uses: Cyb3r-Jak3/html5validator-action@41633d488eb36e18fd1a95ffc83daf1bf22a75bd # v7.2.0
+        with:
+          root: _site/
+          css: true
+          skip_git_check: true
 
   deploy:
     needs: [build, pa11y-ci, validate]
