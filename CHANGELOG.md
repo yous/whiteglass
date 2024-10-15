@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Support Jekyll &lt; 4 (#54)
+
 ## 1.11.6 (2024-10-13)
 
 - Fix Sass warnings

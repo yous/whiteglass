@@ -1,5 +1,3 @@
-@use "sass:color";
-
 // Define defaults for each variable.
 $base-font-family: Bitter, "Apple SD Gothic Neo", "Noto Sans", "Source Han Sans", "Noto Sans CJK JP", "Source Han Sans JP", "Noto Sans CJK KR", "Source Han Sans KR", NanumBarunGothic, AppleGothic, "Malgun Gothic", Dotum, sans-serif !default;
 $monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace !default;
@@ -15,8 +13,8 @@ $background-color: #fdfdfd !default;
 $brand-color:      #2568ba !default;
 
 $grey-color:       #757575 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 45%) !default;
-$grey-color-dark:  color.adjust($grey-color, $lightness: -20%) !default;
+$grey-color-light: adjust-color($grey-color, $lightness: 45%) !default;
+$grey-color-dark:  adjust-color($grey-color, $lightness: -20%) !default;
 
 // Width of the content area
 $content-width:    800px !default;
