@@ -33,7 +33,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-        if: ${{ matrix.jekyll == "< 5.0" }}
+        if: ${{ matrix.jekyll == '< 5.0' }}
         uses: actions/upload-pages-artifact@v3
 
   pa11y-ci:
