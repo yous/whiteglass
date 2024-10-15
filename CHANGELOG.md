@@ -1,6 +1,6 @@
 # ChangeLog
 
-## HEAD
+## 1.11.7 (2024-10-15)
 
 - Support Jekyll &lt; 4 (#54)
 
