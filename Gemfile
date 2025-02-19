@@ -2,5 +2,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
-gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "< 4.0"
-gem "webrick"
+if ENV["JEKYLL_VERSION"] == "< 4.0"
+  gem "base64", "~> 0.2"
+  gem "kramdown-parser-gfm", "~> 1.0"
+end
