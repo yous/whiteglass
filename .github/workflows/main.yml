@@ -34,7 +34,7 @@ jobs:
           JEKYLL_ENV: production
       - name: Upload artifact
         if: ${{ matrix.jekyll == '< 5.0' }}
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
 
   pa11y-ci:
     needs: build
