@@ -50,7 +50,7 @@ jobs:
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
           check-latest: true
