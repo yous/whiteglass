@@ -47,14 +47,16 @@ jobs:
         with:
           ruby-version: '3.4'
           bundler-cache: true
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
           check-latest: true
-      - run: npm install -g pa11y-ci
+      - run: npm install -g puppeteer
+      - run: puppeteer --version
+      - run: puppeteer browsers install chrome@148.0.7778.97
+      - run: puppeteer browsers list
+      - run: npm install -g pa11y-ci@4.1.1
       - name: Download artifact
         uses: actions/download-artifact@v8
         with:
